@@ -1489,6 +1489,14 @@
   ],
   "comparisons": [
     {
+      "id": "cmp_1791604630997",
+      "ownerId": "admin-user-1",
+      "title": "Comparison: Rasikh Ali vs Elena Rostova",
+      "comparisonType": "DEVELOPER_VS_DEVELOPER",
+      "createdAt": "2026-10-10T03:57:10.997Z",
+      "results": []
+    },
+    {
       "id": "cmp_1791596953319",
       "ownerId": "admin-user-1",
       "title": "Comparison: Rasikh Ali vs Elena Rostova",

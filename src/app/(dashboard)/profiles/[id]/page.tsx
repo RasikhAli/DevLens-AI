@@ -179,60 +179,16 @@ export default async function ProfileDetailPage({
         {/* 2. INTERACTIVE REPOSITORY EXPLORER (Search, Filters, Flagships, Table/Grid, Pagination) */}
         <ProfileRepositoryExplorer projects={profile.projects} />
 
-        {/* 3. CATEGORIZED SKILL TAXONOMY & AUDITABLE EVIDENCE */}
+        {/* 3. AUDITABLE EVIDENCE TRAIL & SKILL COMPETENCIES (Switched Layout) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Skills Column (2 cols) */}
-          <div className="lg:col-span-2 bento-card p-6 md:p-8 space-y-6">
-            <div className="flex items-center justify-between border-b border-border/70 dark:border-white/5 pb-3">
-              <div className="flex items-center gap-2">
-                <Code2 className="w-5 h-5 text-violet-500 dark:text-violet-400" />
-                <h3 className="font-bold text-base text-foreground">
-                  Audited Skill Competencies ({profile.skills.length})
-                </h3>
-              </div>
-              <span className="text-xs text-emerald-600 dark:text-emerald-400 font-mono font-semibold">
-                {verifiedSkillsCount} Verified with Provenance
-              </span>
-            </div>
-
-            {/* Categorized Skills Display */}
-            <div className="space-y-5">
-              {Object.entries(skillsByCategory).map(([category, skills]) => (
-                <div key={category} className="space-y-2.5">
-                  <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-muted-foreground block">
-                    {category} ({skills.length})
-                  </span>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-                    {skills.map((sk) => (
-                      <div
-                        key={sk.id}
-                        className="p-3 rounded-xl border border-border/70 bg-muted/40 dark:border-white/5 dark:bg-white/[0.02] flex items-center justify-between text-xs"
-                      >
-                        <div className="min-w-0 pr-2">
-                          <span className="font-semibold text-foreground block truncate">
-                            {sk.canonicalName}
-                          </span>
-                          <span className="text-[10px] text-muted-foreground font-mono">
-                            {sk.claimedProficiency || "Mid"}
-                          </span>
-                        </div>
-                        <Badge
-                          variant={sk.evidenceStatus === "VERIFIED" ? "success" : "secondary"}
-                          className="text-[10px] px-1.5 py-0 font-mono shrink-0"
-                        >
-                          {sk.evidenceStatus === "VERIFIED" ? "Verified" : "Claimed"}
-                        </Badge>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
+          {/* Evidence Trail & Provenance Column (2 cols) */}
+          <div className="lg:col-span-2 space-y-6">
+            <EvidenceDrawer evidences={profile.evidences} />
 
             {/* Documented Experience Timeline */}
             {profile.experiences.length > 0 && (
-              <div className="pt-4 border-t border-border/70 dark:border-white/5 space-y-4">
-                <div className="flex items-center gap-2">
+              <div className="bento-card p-6 md:p-8 space-y-4">
+                <div className="flex items-center gap-2 border-b border-border/70 dark:border-white/5 pb-3">
                   <Calendar className="w-4 h-4 text-primary" />
                   <h4 className="font-bold text-sm text-foreground">
                     Work History & Career Evidence ({profile.experiences.length})
@@ -257,7 +213,7 @@ export default async function ProfileDetailPage({
             )}
           </div>
 
-          {/* Radar & Traceable Evidence Column (1 col) */}
+          {/* Radar & Audited Skill Competencies Column (1 col) */}
           <div className="space-y-6">
             <div className="bento-card p-5 space-y-3">
               <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground block">
@@ -266,7 +222,54 @@ export default async function ProfileDetailPage({
               <SkillRadarChart candidateName={profile.name} />
             </div>
 
-            <EvidenceDrawer evidences={profile.evidences} />
+            {/* Audited Skill Competencies */}
+            <div className="bento-card p-5 md:p-6 space-y-5">
+              <div className="flex items-center justify-between border-b border-border/70 dark:border-white/5 pb-3">
+                <div className="flex items-center gap-2">
+                  <Code2 className="w-5 h-5 text-violet-500 dark:text-violet-400" />
+                  <h3 className="font-bold text-sm text-foreground">
+                    Audited Skill Competencies ({profile.skills.length})
+                  </h3>
+                </div>
+                <span className="text-[11px] text-emerald-600 dark:text-emerald-400 font-mono font-semibold">
+                  {verifiedSkillsCount} Verified
+                </span>
+              </div>
+
+              {/* Categorized Skills Display */}
+              <div className="space-y-4">
+                {Object.entries(skillsByCategory).map(([category, skills]) => (
+                  <div key={category} className="space-y-2">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-muted-foreground block">
+                      {category} ({skills.length})
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-2">
+                      {skills.map((sk) => (
+                        <div
+                          key={sk.id}
+                          className="p-2.5 rounded-xl border border-border/70 bg-muted/40 dark:border-white/5 dark:bg-white/[0.02] flex items-center justify-between text-xs"
+                        >
+                          <div className="min-w-0 pr-2">
+                            <span className="font-semibold text-foreground block truncate text-xs">
+                              {sk.canonicalName}
+                            </span>
+                            <span className="text-[10px] text-muted-foreground font-mono">
+                              {sk.claimedProficiency || "Mid"}
+                            </span>
+                          </div>
+                          <Badge
+                            variant={sk.evidenceStatus === "VERIFIED" ? "success" : "secondary"}
+                            className="text-[9px] px-1.5 py-0 font-mono shrink-0"
+                          >
+                            {sk.evidenceStatus === "VERIFIED" ? "Verified" : "Claimed"}
+                          </Badge>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
