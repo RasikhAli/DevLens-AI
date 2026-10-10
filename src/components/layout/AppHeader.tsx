@@ -37,22 +37,6 @@ export function AppHeader({ title = "Dashboard" }: { title?: string }) {
     router.refresh();
   };
 
-  const handleSwitchToAdmin = async () => {
-    try {
-      const res = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: "admin@devlens.ai", password: "Admin@123" }),
-      });
-      if (res.ok) {
-        await fetchUser();
-        router.refresh();
-      }
-    } catch (err) {
-      console.error("Failed to switch to admin:", err);
-    }
-  };
-
   const isAdmin = user?.role === "ADMIN";
 
   return (
@@ -91,7 +75,7 @@ export function AppHeader({ title = "Dashboard" }: { title?: string }) {
         {/* Theme Toggle */}
         <ThemeToggle />
 
-        {/* User indicator & Account Switcher */}
+        {/* User indicator & Sign Out */}
         <div className="flex items-center gap-2.5 pl-2 border-l border-border/70 dark:border-white/10">
           <div
             className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs ${
@@ -112,27 +96,15 @@ export function AppHeader({ title = "Dashboard" }: { title?: string }) {
             </div>
           </div>
 
-          {!isAdmin ? (
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={handleSwitchToAdmin}
-              className="text-[11px] h-7 px-2.5 gap-1 border-amber-500/40 text-amber-600 dark:text-amber-400 hover:bg-amber-500/10"
-              title="Switch to Admin Account"
-            >
-              <ShieldCheck className="w-3 h-3" /> Switch to Admin
-            </Button>
-          ) : (
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={handleLogout}
-              className="h-8 w-8 text-muted-foreground hover:text-rose-500"
-              title="Sign Out"
-            >
-              <LogOut className="w-3.5 h-3.5" />
-            </Button>
-          )}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={handleLogout}
+            className="h-8 w-8 text-muted-foreground hover:text-rose-500"
+            title="Sign Out"
+          >
+            <LogOut className="w-3.5 h-3.5" />
+          </Button>
         </div>
       </div>
     </header>

@@ -90,15 +90,27 @@ sequenceDiagram
 
 ---
 
-## 🛡️ Role-Based Access Control (RBAC) & Admin Accounts
+## 🛡️ Role-Based Access Control (RBAC) & System Credentials
 
-DevLens AI features a multi-role authentication system:
+DevLens AI enforces strict role-based access control. All dashboard routes require explicit authentication via the sign-in portal (`/sign-in`); unauthenticated attempts to access `/dashboard` or candidate dossiers automatically redirect to the login screen.
 
-| Role | Email | Password | Permissions |
+### Pre-Configured System Credentials
+
+| Role | Email | Password | Privileges & Administrative Authority |
 |---|---|---|---|
-| **Administrator** | `admin@devlens.ai` | `Admin@123` | **Full Authority**: Add & delete developer profiles, add & delete job postings, delete audit reports, manage user permissions. |
-| **Recruiter** | `demo@devlens.ai` | `Demo@123` | **Standard Evaluation**: Ingest candidates, run job matches, evaluate comparison matrices. |
-| **Viewer** | `viewer@devlens.ai` | `Viewer@123` | **Read-Only**: View candidates, review rankings, export reports. Destructive actions are prohibited. |
+| **Administrator** | `admin@devlens.ai` | `Admin@123` | **Full Administrative Authority**: Only Admins can add & delete candidate profiles, create & delete job postings, delete audit reports, and configure system parameters. |
+| **Recruiter** | `demo@devlens.ai` | `Demo@123` | **Standard Evaluation**: Ingest candidate profiles (CV/GitHub/Portfolio), run candidate-to-job matching, and generate comparison matrices. Destructive actions are prohibited. |
+| **Viewer** | `viewer@devlens.ai` | `Viewer@123` | **Read-Only**: Review candidate dossiers, inspect evidence provenance, and export reports. Forbidden from destructive operations (`403 Forbidden`). |
+
+### Authentication & Access Rules
+
+1. **Explicit Authentication Required**:
+   - There is no unauthenticated bypass or auto-login. Clicking **Launch Platform** or **Explore Live Dashboard** from the landing page routes through the server authentication gate; unauthenticated visitors are directed to `/sign-in`.
+2. **Dedicated Sign-In**:
+   - Enter your email and password at `http://localhost:3000/sign-in`.
+3. **Session Management**:
+   - Sessions are secured with signed HTTP-only cookies (`devlens_session`) using bcrypt password verification.
+   - To switch accounts or sign out, click the **Sign Out** button in the top navigation header.
 
 ---
 

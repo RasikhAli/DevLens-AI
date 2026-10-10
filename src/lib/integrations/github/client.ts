@@ -30,6 +30,7 @@ export interface GitHubRepoItem {
   created_at: string;
   updated_at: string;
   default_branch: string;
+  homepage?: string | null;
   license?: { name: string; spdx_id: string } | null;
 }
 
@@ -124,9 +125,9 @@ export class GitHubClient {
   }
 
   /**
-   * Fetch ALL user's public repositories using pagination (up to 100 per page, all pages)
+   * Fetch ALL user's public repositories using pagination (up to 100 per page, up to 10 pages / 1,000 repos)
    */
-  public async getAllUserRepos(username: string, maxPages: number = 5): Promise<GitHubRepoItem[]> {
+  public async getAllUserRepos(username: string, maxPages: number = 10): Promise<GitHubRepoItem[]> {
     const cleanUser = GitHubClient.extractUsername(username);
     const allRepos: GitHubRepoItem[] = [];
 
@@ -149,9 +150,8 @@ export class GitHubClient {
       }
     }
 
-    // Exclude forks by default unless it's the only repo, return all repositories
-    const nonForks = allRepos.filter((r) => !r.fork);
-    return nonForks.length > 0 ? nonForks : allRepos;
+    // Return ALL ingested repositories without dropping any
+    return allRepos;
   }
 
   /**
@@ -241,22 +241,58 @@ export class GitHubClient {
     let ciCount = 0;
     let docsCount = 0;
 
-    // Inspect repositories in parallel batches of 5 to respect rate limits while maintaining high performance
+    // Determine deep inspection budget based on token presence
+    const hasAuthToken = Boolean(this.token && this.token.trim().length > 0);
+    // If authenticated: deep inspect up to 80 repos; if unauthenticated: deep inspect top 15 to stay within 60 req/hr, and use metadata heuristics for the rest
+    const deepInspectBudget = hasAuthToken ? 80 : 15;
+
+    // Sort to prioritize top starred or recent repos for deep inspection
+    const prioritizedRepos = [...repos].sort((a, b) => (b.stargazers_count || 0) - (a.stargazers_count || 0));
+
+    // Inspect repositories in parallel batches of 5 to maintain high performance
     const BATCH_SIZE = 5;
-    for (let i = 0; i < repos.length; i += BATCH_SIZE) {
-      const batch = repos.slice(i, i + BATCH_SIZE);
+    for (let i = 0; i < prioritizedRepos.length; i += BATCH_SIZE) {
+      const batch = prioritizedRepos.slice(i, i + BATCH_SIZE);
+      const shouldDeepInspect = i < deepInspectBudget;
+
       const batchResults = await Promise.all(
         batch.map(async (repo) => {
           if (repo.language) {
             languageCounts[repo.language] = (languageCounts[repo.language] || 0) + 1;
           }
 
-          // Inspect CI, Docs, and Tests
-          const [hasCI, hasDocs, testCheck] = await Promise.all([
-            this.checkCIWorkflow(user.login, repo.name),
-            this.checkReadme(user.login, repo.name),
-            this.checkTestIndicators(user.login, repo.name),
-          ]);
+          let hasCI = false;
+          let hasDocs = false;
+          let testCheck: { hasTests: boolean; evidence: string | null } = { hasTests: false, evidence: null };
+
+          if (shouldDeepInspect) {
+            try {
+              const [ci, docs, tests] = await Promise.all([
+                this.checkCIWorkflow(user.login, repo.name),
+                this.checkReadme(user.login, repo.name),
+                this.checkTestIndicators(user.login, repo.name),
+              ]);
+              hasCI = ci;
+              hasDocs = docs;
+              testCheck = tests;
+            } catch {
+              // Gracefully handle rate limit fallback
+            }
+          }
+
+          // Heuristic fallback from topics and metadata if deep inspection wasn't performed or returned false
+          if (!hasCI && repo.topics) {
+            hasCI = repo.topics.some((t) => /ci|github-actions|workflow|devops/i.test(t));
+          }
+          if (!testCheck.hasTests && repo.topics) {
+            const testTopic = repo.topics.find((t) => /test|jest|vitest|pytest|testing|tdd/i.test(t));
+            if (testTopic) {
+              testCheck = { hasTests: true, evidence: `Topic tag: ${testTopic}` };
+            }
+          }
+          if (!hasDocs && (repo.description || repo.homepage)) {
+            hasDocs = true;
+          }
 
           let complexity = 45; // baseline
           if (testCheck.hasTests) complexity += 20;

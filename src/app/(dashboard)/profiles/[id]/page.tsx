@@ -5,12 +5,13 @@ import { AppHeader } from "@/components/layout/AppHeader";
 import { ProfileSourceBadge } from "@/components/profiles/ProfileSourceBadge";
 import { EvidenceDrawer } from "@/components/profiles/EvidenceDrawer";
 import { DeleteProfileButton } from "@/components/profiles/DeleteProfileButton";
+import { ProfileAnalyticsHub } from "@/components/profiles/ProfileAnalyticsHub";
+import { ProfileRepositoryExplorer } from "@/components/profiles/ProfileRepositoryExplorer";
 import { SkillRadarChart } from "@/components/charts/SkillRadarChart";
 import { ShimmerBadge } from "@/components/ui/bento-grid";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
 import {
   MapPin,
   Globe,
@@ -25,11 +26,11 @@ import {
   Calendar,
   Layers,
   FolderGit2,
-  Star,
-  GitFork,
   CheckCircle2,
   Cpu,
-  ArrowRight,
+  Sparkles,
+  Download,
+  Terminal,
 } from "lucide-react";
 import { dbStore } from "@/lib/data/store";
 
@@ -54,6 +55,14 @@ export default async function ProfileDetailPage({
     ? Math.round(profile.projects.reduce((acc, p) => acc + (p.complexityScore || 50), 0) / profile.projects.length)
     : 0;
 
+  // Group skills by category
+  const skillsByCategory: Record<string, typeof profile.skills> = {};
+  profile.skills.forEach((sk) => {
+    const cat = sk.category || "General";
+    if (!skillsByCategory[cat]) skillsByCategory[cat] = [];
+    skillsByCategory[cat].push(sk);
+  });
+
   return (
     <div className="flex flex-col min-h-screen">
       <AppHeader title={profile.name} />
@@ -72,6 +81,9 @@ export default async function ProfileDetailPage({
                 </ShimmerBadge>
                 <span className="font-mono text-xs px-2.5 py-1 rounded-md bg-muted/60 border border-border text-foreground dark:bg-white/[0.04] dark:border-white/10 dark:text-muted-foreground">
                   {profile.projects.length} Repositories Ingested
+                </span>
+                <span className="font-mono text-xs px-2.5 py-1 rounded-md bg-violet-500/10 border border-violet-500/30 text-violet-600 dark:text-violet-400 font-bold">
+                  {profile.completeness}% Audit Complete
                 </span>
               </div>
 
@@ -126,7 +138,7 @@ export default async function ProfileDetailPage({
           </div>
         </div>
 
-        {/* 4-Column Bento Summary Grid */}
+        {/* 4-Column Bento Summary Metric Strip */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="bento-card p-4 space-y-1">
             <span className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">Total Repositories</span>
@@ -161,139 +173,58 @@ export default async function ProfileDetailPage({
           </div>
         </div>
 
-        {/* ALL PROJECTS & REPOSITORIES BENTO GALLERY */}
-        <div className="bento-card p-6 md:p-8 space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border/70 dark:border-white/5 pb-4">
-            <div>
-              <div className="flex items-center gap-2">
-                <FolderGit2 className="w-5 h-5 text-violet-500 dark:text-violet-400" />
-                <h3 className="font-bold text-lg text-foreground tracking-tight">
-                  All Ingested Repositories & Projects ({profile.projects.length})
-                </h3>
-              </div>
-              <p className="text-xs text-muted-foreground mt-0.5">
-                Every project and public repository retrieved and analyzed with observable test suites and CI workflows.
-              </p>
-            </div>
+        {/* 1. DEEP DEVELOPER ANALYTICS HUB (Languages, Discipline Index, Complexity Tiers) */}
+        <ProfileAnalyticsHub profile={profile} />
 
-            <div className="flex items-center gap-2 text-xs font-mono text-muted-foreground">
-              <span>{testedCount} tested</span>
-              <span>•</span>
-              <span>{ciCount} CI/CD active</span>
-            </div>
-          </div>
+        {/* 2. INTERACTIVE REPOSITORY EXPLORER (Search, Filters, Flagships, Table/Grid, Pagination) */}
+        <ProfileRepositoryExplorer projects={profile.projects} />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {profile.projects.map((proj) => (
-              <div
-                key={proj.id}
-                className="group p-4 rounded-xl border border-border/70 bg-card/70 hover:bg-muted/60 dark:border-white/5 dark:bg-white/[0.02] dark:hover:bg-white/[0.05] hover:border-violet-500/40 transition-all duration-300 flex flex-col justify-between space-y-3 shadow-sm dark:shadow-none"
-              >
-                <div className="space-y-2">
-                  <div className="flex items-start justify-between gap-2">
-                    <span className="font-bold text-sm text-foreground group-hover:text-primary transition-colors tracking-tight line-clamp-1">
-                      {proj.name}
-                    </span>
-                    {proj.repositoryUrl && (
-                      <a
-                        href={proj.repositoryUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-muted-foreground hover:text-foreground p-0.5"
-                        title="Open Repository"
-                      >
-                        <ExternalLink className="w-3.5 h-3.5" />
-                      </a>
-                    )}
-                  </div>
-
-                  {proj.description && (
-                    <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">
-                      {proj.description}
-                    </p>
-                  )}
-                </div>
-
-                <div className="space-y-2.5 pt-2 border-t border-border/70 dark:border-white/5">
-                  {/* Tech stack badges */}
-                  <div className="flex items-center gap-1.5 flex-wrap">
-                    {proj.technologies.slice(0, 3).map((t) => (
-                      <span
-                        key={t}
-                        className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-muted/70 border border-border text-foreground dark:bg-white/[0.04] dark:border-white/10 dark:text-zinc-300"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                    {proj.technologies.length > 3 && (
-                      <span className="text-[10px] text-muted-foreground font-mono">
-                        +{proj.technologies.length - 3}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Test & CI Indicator Pills */}
-                  <div className="flex items-center justify-between text-[10px] pt-1 font-mono">
-                    <div className="flex items-center gap-1.5">
-                      {proj.hasTests ? (
-                        <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-semibold">
-                          ✓ Tests
-                        </span>
-                      ) : (
-                        <span className="text-muted-foreground/50">No tests</span>
-                      )}
-
-                      {proj.hasCI && (
-                        <span className="px-1.5 py-0.5 rounded bg-cyan-500/10 border border-cyan-500/20 text-cyan-600 dark:text-cyan-400 font-semibold">
-                          ✓ CI
-                        </span>
-                      )}
-                    </div>
-
-                    {proj.complexityScore && (
-                      <span className="text-muted-foreground font-semibold">
-                        Index: {proj.complexityScore}/100
-                      </span>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* SKILLS & EVIDENCE DUAL BENTO */}
+        {/* 3. CATEGORIZED SKILL TAXONOMY & AUDITABLE EVIDENCE */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Skills Column (2 cols) */}
-          <div className="lg:col-span-2 bento-card p-6 md:p-8 space-y-5">
+          <div className="lg:col-span-2 bento-card p-6 md:p-8 space-y-6">
             <div className="flex items-center justify-between border-b border-border/70 dark:border-white/5 pb-3">
               <div className="flex items-center gap-2">
                 <Code2 className="w-5 h-5 text-violet-500 dark:text-violet-400" />
                 <h3 className="font-bold text-base text-foreground">
-                  Technical Skill Taxonomy ({profile.skills.length})
+                  Audited Skill Competencies ({profile.skills.length})
                 </h3>
               </div>
               <span className="text-xs text-emerald-600 dark:text-emerald-400 font-mono font-semibold">
-                {verifiedSkillsCount} Auditable Claims
+                {verifiedSkillsCount} Verified with Provenance
               </span>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-              {profile.skills.map((sk) => (
-                <div
-                  key={sk.id}
-                  className="p-3 rounded-xl border border-border/70 bg-muted/40 dark:border-white/5 dark:bg-white/[0.02] flex items-center justify-between text-xs"
-                >
-                  <div>
-                    <span className="font-semibold text-foreground block">{sk.canonicalName}</span>
-                    <span className="text-[10px] text-muted-foreground font-mono">{sk.category}</span>
+            {/* Categorized Skills Display */}
+            <div className="space-y-5">
+              {Object.entries(skillsByCategory).map(([category, skills]) => (
+                <div key={category} className="space-y-2.5">
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-muted-foreground block">
+                    {category} ({skills.length})
+                  </span>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                    {skills.map((sk) => (
+                      <div
+                        key={sk.id}
+                        className="p-3 rounded-xl border border-border/70 bg-muted/40 dark:border-white/5 dark:bg-white/[0.02] flex items-center justify-between text-xs"
+                      >
+                        <div className="min-w-0 pr-2">
+                          <span className="font-semibold text-foreground block truncate">
+                            {sk.canonicalName}
+                          </span>
+                          <span className="text-[10px] text-muted-foreground font-mono">
+                            {sk.claimedProficiency || "Mid"}
+                          </span>
+                        </div>
+                        <Badge
+                          variant={sk.evidenceStatus === "VERIFIED" ? "success" : "secondary"}
+                          className="text-[10px] px-1.5 py-0 font-mono shrink-0"
+                        >
+                          {sk.evidenceStatus === "VERIFIED" ? "Verified" : "Claimed"}
+                        </Badge>
+                      </div>
+                    ))}
                   </div>
-                  <Badge
-                    variant={sk.evidenceStatus === "VERIFIED" ? "success" : "secondary"}
-                    className="text-[10px] px-1.5 py-0 font-mono"
-                  >
-                    {sk.evidenceStatus === "VERIFIED" ? "Verified" : "Claimed"}
-                  </Badge>
                 </div>
               ))}
             </div>
@@ -330,7 +261,7 @@ export default async function ProfileDetailPage({
           <div className="space-y-6">
             <div className="bento-card p-5 space-y-3">
               <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground block">
-                Technical Strength Radar
+                Technical Competency Radar
               </span>
               <SkillRadarChart candidateName={profile.name} />
             </div>

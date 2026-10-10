@@ -37,15 +37,18 @@ Traditional hiring tools rely either on keyword matching (which favors buzzword-
 
 ## 3. Role-Based Access Control (RBAC) & Administration
 
-DevLens AI features a multi-role authentication system enforced at both the API Route Handler level and the UI layer:
+DevLens AI features a strict multi-role authentication system enforced at both the API Route Handler level and the UI layer. All dashboard routes require explicit login; unauthenticated visitors are automatically redirected to `/sign-in`.
 
-| Role | Default Account | Password | Permissions |
+| Role | Default Account | Password | Permissions & Authority |
 |---|---|---|---|
 | **Administrator** | `admin@devlens.ai` | `Admin@123` | **Full Authority**: Add & delete developer profiles, add & delete job descriptions, manage & delete audit reports, view system audit logs. |
 | **Recruiter** | `demo@devlens.ai` | `Demo@123` | **Standard Evaluation**: Ingest candidate CVs/GitHub profiles, create job requisitions, execute comparisons, run candidate matchings. |
-| **Viewer** | `viewer@devlens.ai` | `Viewer@123` | **Read-Only**: Inspect candidate dossiers, review rankings, export reports. Destructive actions are strictly blocked. |
+| **Viewer** | `viewer@devlens.ai` | `Viewer@123` | **Read-Only**: Inspect candidate dossiers, review rankings, export reports. Destructive actions are strictly blocked (`403 Forbidden`). |
 
-### Administrative Safeguards:
+### Authentication & Access Rules:
+- **No Auto-Login / No Bypass**: Dashboard access strictly requires an active authenticated session. Landing page action buttons route through the authentication barrier.
+- **Dedicated Sign-In**: Login occurs at `/sign-in` with validated credentials; credentials are not pre-filled automatically.
+- **Standard Sign-Out**: The navigation header includes a direct Sign-Out action to clear session tokens.
 - **Profile Deletion**: Dedicated delete actions on both candidate cards and detail dossiers with interactive two-step confirmation modals.
 - **Batch Deletion**: Capability to select multiple candidates and delete them in a single batch operation.
 - **Job & Report Archival**: Full CRUD lifecycle control over open requisitions and generated audit archives.

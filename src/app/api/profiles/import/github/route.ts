@@ -8,6 +8,7 @@ import { getSessionUser } from "@/lib/auth/session";
 const GitHubImportSchema = z.object({
   username: z.string().min(1, "GitHub username or profile URL is required"),
   profileId: z.string().optional(),
+  token: z.string().optional(),
 });
 
 export async function POST(request: Request) {
@@ -22,8 +23,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Invalid username", details: parsed.error.flatten() }, { status: 400 });
     }
 
-    const { username, profileId: existingProfileId } = parsed.data;
-    const client = new GitHubClient();
+    const { username, profileId: existingProfileId, token } = parsed.data;
+    const client = new GitHubClient(token);
 
     // 1. Analyze GitHub profile and repos
     const ghData = await client.analyzeProfile(username);

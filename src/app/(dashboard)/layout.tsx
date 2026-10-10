@@ -1,11 +1,18 @@
 import React from "react";
+import { redirect } from "next/navigation";
+import { getSessionUser } from "@/lib/auth/session";
 import { AppSidebar } from "@/components/layout/AppSidebar";
 
-export default function DashboardLayout({
+export default async function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const user = await getSessionUser();
+  if (!user) {
+    redirect("/sign-in");
+  }
+
   return (
     <div className="min-h-screen bg-background flex flex-row">
       <AppSidebar />
@@ -17,3 +24,4 @@ export default function DashboardLayout({
     </div>
   );
 }
+

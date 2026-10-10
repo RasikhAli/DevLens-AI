@@ -32,6 +32,7 @@ function NewProfileForm() {
   // Form states
   const [cvFile, setCvFile] = useState<File | null>(null);
   const [githubInput, setGithubInput] = useState("");
+  const [githubToken, setGithubToken] = useState("");
   const [portfolioUrl, setPortfolioUrl] = useState("");
   const [manualName, setManualName] = useState("");
   const [manualTitle, setManualTitle] = useState("");
@@ -78,7 +79,10 @@ function NewProfileForm() {
       const res = await fetch("/api/profiles/import/github", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username: githubInput.trim() }),
+        body: JSON.stringify({
+          username: githubInput.trim(),
+          token: githubToken.trim() || undefined,
+        }),
       });
 
       const data = await res.json();
@@ -264,20 +268,42 @@ function NewProfileForm() {
                   placeholder="e.g. torvalds or https://github.com/torvalds"
                   value={githubInput}
                   onChange={(e) => setGithubInput(e.target.value)}
-                  className="text-xs"
+                  className="text-xs font-mono"
+                  required
                 />
+              </div>
+
+              <div>
+                <div className="flex items-center justify-between mb-1.5">
+                  <label className="text-xs font-semibold text-foreground">
+                    GitHub Personal Access Token (Optional)
+                  </label>
+                  <span className="text-[10px] text-muted-foreground font-mono">
+                    Expands limit from 60 to 5,000 req/hr
+                  </span>
+                </div>
+                <Input
+                  type="password"
+                  placeholder="ghp_xxxxxxxxxxxxxxxxxxxx (Optional for unlimited rate limit)"
+                  value={githubToken}
+                  onChange={(e) => setGithubToken(e.target.value)}
+                  className="text-xs font-mono"
+                />
+                <p className="text-[11px] text-muted-foreground mt-1">
+                  Optional token to fetch all repositories without hitting public rate limits.
+                </p>
               </div>
 
               <div className="p-3 rounded-lg bg-muted/30 border border-border text-[11px] text-muted-foreground space-y-1">
                 <div className="font-semibold text-foreground flex items-center gap-1.5">
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" /> Objective Engineering Analysis
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" /> Full Repository & Engineering Analysis
                 </div>
                 <p>
-                  DevLens AI does not evaluate vanity metrics such as stars or follower counts as measures of competence. It inspects observable code discipline, testing, and continuous delivery evidence.
+                  Fetches all public repositories, inspects test frameworks (Jest/Vitest/PyTest), and detects CI/CD pipelines (.github/workflows) without dropping any repos.
                 </p>
               </div>
 
-              <Button type="submit" disabled={!githubInput.trim() || loading} className="w-full text-xs h-10 gap-2">
+              <Button type="submit" disabled={!githubInput.trim() || loading} className="w-full text-xs h-10 gap-2 font-semibold shimmer-button text-white shadow-sm">
                 {loading && <RefreshCw className="w-4 h-4 animate-spin" />}
                 {loading ? "Inspecting Repositories & Workflows..." : "Import GitHub Data"}
               </Button>
