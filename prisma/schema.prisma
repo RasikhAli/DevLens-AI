@@ -1,0 +1,307 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id           String             @id @default(cuid())
+  email        String             @unique
+  name         String?
+  passwordHash String
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+  profiles     DeveloperProfile[]
+  jobs         Job[]
+  comparisons  Comparison[]
+
+  @@index([email])
+}
+
+model DeveloperProfile {
+  id             String            @id @default(cuid())
+  ownerId        String
+  owner          User              @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  name           String
+  headline       String?
+  summary        String?
+  email          String?
+  phone          String?
+  location       String?
+  websiteUrl     String?
+  githubUsername String?
+  linkedinUrl    String?
+  completeness   Float             @default(0.0) // 0 to 100 percentage
+  createdAt      DateTime          @default(now())
+  updatedAt      DateTime          @updatedAt
+
+  sources        ProfileSource[]
+  skills         DeveloperSkill[]
+  experiences    WorkExperience[]
+  projects       Project[]
+  educations     Education[]
+  certifications Certification[]
+  evidences      Evidence[]
+  analysisRuns   AnalysisRun[]
+  comparisonResults ComparisonResult[]
+
+  @@index([ownerId])
+  @@index([githubUsername])
+  @@index([name])
+}
+
+enum SourceType {
+  CV_DOCUMENT
+  GITHUB_PROFILE
+  PORTFOLIO_WEBSITE
+  LINKEDIN_PROFILE
+  MANUAL_ENTRY
+}
+
+enum ProcessingStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  PARTIALLY_COMPLETED
+  FAILED
+  REQUIRES_AUTHORIZATION
+  INACCESSIBLE
+}
+
+model ProfileSource {
+  id                 String           @id @default(cuid())
+  developerProfileId String
+  developerProfile   DeveloperProfile @relation(fields: [developerProfileId], references: [id], onDelete: Cascade)
+  sourceType         SourceType
+  sourceUrl          String?
+  status             ProcessingStatus @default(PENDING)
+  fileName           String?
+  fileSize           Int?
+  rawContent         String?          @db.Text
+  errorMetadata      String?          @db.Text
+  lastFetchedAt      DateTime?
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+  evidences          Evidence[]
+
+  @@index([developerProfileId])
+  @@index([sourceType])
+}
+
+model Skill {
+  id            String           @id @default(cuid())
+  canonicalName String           @unique
+  category      String           // e.g. "Languages", "Frameworks", "Databases", "DevOps", "Testing"
+  aliases       String[]         @default([])
+  developerSkills DeveloperSkill[]
+
+  @@index([canonicalName])
+  @@index([category])
+}
+
+enum EvidenceStatus {
+  UNVERIFIED
+  CLAIMED
+  VERIFIED
+  INFERRED
+}
+
+model DeveloperSkill {
+  id                 String           @id @default(cuid())
+  developerProfileId String
+  developerProfile   DeveloperProfile @relation(fields: [developerProfileId], references: [id], onDelete: Cascade)
+  skillId            String
+  skill              Skill            @relation(fields: [skillId], references: [id], onDelete: Cascade)
+  claimedProficiency String?          // e.g. "Junior", "Mid", "Senior", "Expert"
+  yearsExperience    Float?
+  evidenceStatus     EvidenceStatus   @default(UNVERIFIED)
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+
+  @@unique([developerProfileId, skillId])
+  @@index([developerProfileId])
+  @@index([skillId])
+}
+
+model WorkExperience {
+  id                 String           @id @default(cuid())
+  developerProfileId String
+  developerProfile   DeveloperProfile @relation(fields: [developerProfileId], references: [id], onDelete: Cascade)
+  employer           String
+  title              String
+  description        String?          @db.Text
+  location           String?
+  startDate          DateTime?
+  endDate            DateTime?
+  isCurrent          Boolean          @default(false)
+  technologies       String[]         @default([])
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+
+  @@index([developerProfileId])
+  @@index([employer])
+}
+
+model Project {
+  id                 String           @id @default(cuid())
+  developerProfileId String
+  developerProfile   DeveloperProfile @relation(fields: [developerProfileId], references: [id], onDelete: Cascade)
+  name               String
+  description        String?          @db.Text
+  repositoryUrl      String?
+  liveUrl            String?
+  technologies       String[]         @default([])
+  complexityScore    Float?           // 0 to 100 estimated technical complexity
+  hasTests           Boolean          @default(false)
+  hasCI              Boolean          @default(false)
+  hasDocs            Boolean          @default(false)
+  starsCount         Int?             @default(0)
+  forksCount         Int?             @default(0)
+  primaryLanguage    String?
+  metadata           String?          @db.Text // JSON string for extra repo metadata
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+
+  @@index([developerProfileId])
+  @@index([name])
+}
+
+enum VerificationStatus {
+  USER_PROVIDED
+  SOURCE_OBSERVED
+  INFERRED
+  USER_CONFIRMED
+  UNABLE_TO_VERIFY
+}
+
+model Evidence {
+  id                 String             @id @default(cuid())
+  developerProfileId String
+  developerProfile   DeveloperProfile   @relation(fields: [developerProfileId], references: [id], onDelete: Cascade)
+  sourceId           String?
+  source             ProfileSource?     @relation(fields: [sourceId], references: [id], onDelete: SetNull)
+  claimType          String             // e.g. "SKILL", "PROJECT_TESTS", "CI_CD", "EXPERIENCE_ROLE"
+  claimValue         String             @db.Text
+  sourceExcerpt      String?            @db.Text
+  repositoryRef      String?
+  confidence         Float              @default(1.0) // 0.0 to 1.0 confidence in observation
+  verificationStatus VerificationStatus @default(SOURCE_OBSERVED)
+  observedAt         DateTime           @default(now())
+
+  @@index([developerProfileId])
+  @@index([claimType])
+  @@index([verificationStatus])
+}
+
+model Education {
+  id                 String           @id @default(cuid())
+  developerProfileId String
+  developerProfile   DeveloperProfile @relation(fields: [developerProfileId], references: [id], onDelete: Cascade)
+  institution        String
+  degree             String?
+  fieldOfStudy       String?
+  startDate          DateTime?
+  endDate            DateTime?
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+
+  @@index([developerProfileId])
+}
+
+model Certification {
+  id                 String           @id @default(cuid())
+  developerProfileId String
+  developerProfile   DeveloperProfile @relation(fields: [developerProfileId], references: [id], onDelete: Cascade)
+  name               String
+  issuer             String
+  issueDate          DateTime?
+  expiryDate         DateTime?
+  credentialUrl      String?
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+
+  @@index([developerProfileId])
+}
+
+model Job {
+  id                 String           @id @default(cuid())
+  ownerId            String
+  owner              User             @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  title              String
+  company            String?
+  description        String           @db.Text
+  requiredSkills     String[]         @default([])
+  preferredSkills    String[]         @default([])
+  requiredExperience Float?           // minimum years
+  requiredTechnologies String[]       @default([])
+  domainRequirements String[]        @default([])
+  scoringWeights     String?          @db.Text // JSON string: { techSkills: 35, projectRelevance: 25, experience: 20, engineering: 10, explicitReqs: 10 }
+  isArchived         Boolean          @default(false)
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+  comparisons        Comparison[]
+
+  @@index([ownerId])
+  @@index([title])
+}
+
+enum ComparisonType {
+  DEVELOPER_VS_DEVELOPER
+  DEVELOPERS_VS_JOB
+  DEVELOPER_VS_JOB
+}
+
+model Comparison {
+  id             String             @id @default(cuid())
+  ownerId        String
+  owner          User               @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  jobId          String?
+  job            Job?               @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  title          String
+  comparisonType ComparisonType
+  configuration  String?            @db.Text // JSON weights and settings
+  createdAt      DateTime           @default(now())
+  updatedAt      DateTime           @updatedAt
+  results        ComparisonResult[]
+
+  @@index([ownerId])
+  @@index([jobId])
+  @@index([comparisonType])
+}
+
+model ComparisonResult {
+  id                 String           @id @default(cuid())
+  comparisonId       String
+  comparison         Comparison       @relation(fields: [comparisonId], references: [id], onDelete: Cascade)
+  developerProfileId String
+  developerProfile   DeveloperProfile @relation(fields: [developerProfileId], references: [id], onDelete: Cascade)
+  totalScore         Float            // 0 to 100
+  categoryScores     String           @db.Text // JSON: { technicalSkills: X, projectRelevance: Y, experience: Z, engineeringPractices: W, explicitReqs: V }
+  evidenceCoverage   Float            // 0 to 100 percentage of required dimensions with verifiable evidence
+  strengths          String[]         @default([])
+  gaps               String[]         @default([])
+  explanation        String?          @db.Text
+  ranking            Int              @default(1)
+  createdAt          DateTime         @default(now())
+
+  @@index([comparisonId])
+  @@index([developerProfileId])
+  @@index([totalScore])
+}
+
+model AnalysisRun {
+  id                 String           @id @default(cuid())
+  developerProfileId String
+  developerProfile   DeveloperProfile @relation(fields: [developerProfileId], references: [id], onDelete: Cascade)
+  status             ProcessingStatus @default(PENDING)
+  startTime          DateTime         @default(now())
+  completionTime     DateTime?
+  errorInfo          String?          @db.Text
+  resultMetadata     String?          @db.Text
+
+  @@index([developerProfileId])
+  @@index([status])
+}

@@ -1,0 +1,3452 @@
+{
+  "users": [
+    {
+      "id": "admin-user-1",
+      "email": "admin@devlens.ai",
+      "name": "Lead System Administrator",
+      "passwordHash": "$2b$10$wKz0bBvXh1LqvI6vOiq9sONJ3gR/P4G.YQk0fF9aJ7p2d9G9h1r5a",
+      "role": "ADMIN",
+      "createdAt": "2026-10-10T00:55:36.030Z"
+    },
+    {
+      "id": "demo-user-1",
+      "email": "demo@devlens.ai",
+      "name": "Engineering Hiring Team",
+      "passwordHash": "$2b$10$wKz0bBvXh1LqvI6vOiq9sONJ3gR/P4G.YQk0fF9aJ7p2d9G9h1r5a",
+      "role": "RECRUITER",
+      "createdAt": "2026-10-10T00:55:36.031Z"
+    },
+    {
+      "id": "demo-user-1",
+      "email": "demo@devlens.ai",
+      "name": "Engineering Hiring Team",
+      "passwordHash": "$2b$10$wKz0bBvXh1LqvI6vOiq9sONJ3gR/P4G.YQk0fF9aJ7p2d9G9h1r5a",
+      "createdAt": "2026-10-09T23:01:08.712Z",
+      "role": "RECRUITER"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "prof_1791592584530",
+      "ownerId": "demo-user-1",
+      "name": "Rasikh Ali | Portfolio CMS",
+      "headline": "Premium developer portfolio and Git-based CMS showcase platform.",
+      "summary": "Premium developer portfolio and Git-based CMS showcase platform.",
+      "websiteUrl": "https://rasikhali.github.io/",
+      "githubUsername": "RasikhAli",
+      "linkedinUrl": "https://linkedin.com/in/RasikhAli",
+      "completeness": 100,
+      "createdAt": "2026-10-10T00:36:24.530Z",
+      "updatedAt": "2026-10-10T00:36:24.531Z",
+      "sources": [
+        {
+          "id": "src_1791592584530",
+          "developerProfileId": "prof_1791592584530",
+          "sourceType": "PORTFOLIO_WEBSITE",
+          "sourceUrl": "https://rasikhali.github.io/",
+          "status": "COMPLETED",
+          "rawContent": "Rasikh Ali | Portfolio CMS Rasikh Ali Projects Timeline Tech Explorer Developers Testimonials Search Ctrl K Admin Rasikh Ali Python Developer | Junior Lecturer | Artificial Intelligence Developer Gold Medalist | Software Engineer | Building scalable and impactful applications Gold Medalist | Software Engineer GitHub LinkedIn Twitter Email Resume Copy Email 0 Projects 0 Technologies 0 Contributors @ RasikhAli GitHub Handle GitHub Engineering Analytics LIVE PULSE Automated repository activity, language breakdown &amp; commit frequency Follow @GitHub Primary Stack Breakdown 100% Analyzed TypeScript / JavaScript 48 % Python 26 % HTML / CSS 16 % C++ / Other 10 % 12-Month Commit Cadence +45% YoY Growth 12 commits 19 commits 25 commits 32 commits 18 commits 45 commits 60 commits 52 commits 78 commits 85 commits 92 commits 110 commits Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Total Commits 650+ Pushed to production repos Stars Earned 140+ Across open source projects Forks &amp; Pulls 45+ Community collaborations Longest Streak 28 Days Continuous daily commits Featured Work Hand-picked engineering projects with full source and previews. All Projects ( 61 ) COMPLETED JavaScript CSS HTML Nfc Canvas NFC Canvas is an ultra-modern, zero-backend web studio built to design and generate production-ready, ultra high-resolution contactless NFC &quot;Tap to Review&quot; business cards. COMPLETED TypeScript CSS HTML + 1 more Studygranthub StudyGrantHub is an automated, high-performance global scholarship aggregator web application. It monitors over 15+ government portals, university exchange programs, and international grant databases Python No Screenshots Uploaded Yet COMPLETED Python Instantboard A polished Windows soundboard that plays sound effects directly into your microphone input â perfect for Discord, Zoom, games, and streams. Built with Python, PySide6, and VB-CABLE. !Python !Window COMPLETED JavaScript CSS HTML + 2 more Autobleep Pro AutoBleep Pro is a professional browser-based AI video editing and profanity censoring application. It features automated speech-to-text profanity detection, a multi-track visual timeline (supporting COMPLETED Jupyter Notebook HTML Python Qrgen A premium, feature-rich QR Code Generator engineered with Python (Flask) and a pristine Glassmorphism frontend. COMPLETED TypeScript Python CSS + 2 more Examina Ai Using AI, It transforms raw study materials into structured, verified examination sets with support for institutional export formats like Moodle XML. COMPLETED TypeScript CSS JavaScript Bulk Name Checker A high-performance web application for entrepreneurs, marketers, and developers who need to validate name availability at scale. COMPLETED Python CSS HTML + 2 more Superior Academic Tool A comprehensive academic management platform designed to streamline educational data processing, timetable management, CGPA calculation, and creative text design - all in one unified dashboard. COMPLETED HTML Python Superior Audit Pulse: Institutional Compliance Suite Superior Audit Pulse is a high-performance, institutional-grade academic repository scanner and continuous validation engine. Architected precisely for verifying stringent NCEAC (National Computing Ed All Projects Key Contributors The talented engineers designing and maintaining our products. Directory Rasikh Ali Python Developer | Junior Lecturer | Artificial Intelligence Developer A skilled software developer with experience in various programming languages and tools. Committed to delivering high-quality software solutions. Python FastAPI Next.js React.js + 14 View Profile Education &amp; Teaching Academic lectures, labs, and mentoring the next generation of engineers. Superior University Junior Lecturer Instructing university labs and courses in Artificial Intelligence , Data Science , and Software Engineering . Courses taught include Programming for AI (PAI), Object-Oriented Programming (OOP), Computer Networks (CN), and AI Labs. Active (Fall 2023 – Present) Students Testimonial Loading student reviews... Want to collaborate? Reach out if you are interested in working together, building something new, or discussing technical topics. Contact Me Rasikh Ali | Portfolio CMS © 2026 Rasikh Ali. All rights reserved. Built with Next.js &amp; Tailwind CSS.",
+          "lastFetchedAt": "2026-10-10T00:36:24.530Z",
+          "createdAt": "2026-10-10T00:36:24.530Z"
+        }
+      ],
+      "skills": [
+        {
+          "id": "sk_1791592584530_kns57r",
+          "developerProfileId": "prof_1791592584530",
+          "canonicalName": "React",
+          "category": "Frontend",
+          "claimedProficiency": "Mid",
+          "evidenceStatus": "CLAIMED"
+        },
+        {
+          "id": "sk_1791592584530_7n7s9h",
+          "developerProfileId": "prof_1791592584530",
+          "canonicalName": "Next.js",
+          "category": "Frontend",
+          "claimedProficiency": "Mid",
+          "evidenceStatus": "CLAIMED"
+        },
+        {
+          "id": "sk_1791592584530_rups2",
+          "developerProfileId": "prof_1791592584530",
+          "canonicalName": "TypeScript",
+          "category": "Languages",
+          "claimedProficiency": "Mid",
+          "evidenceStatus": "CLAIMED"
+        },
+        {
+          "id": "sk_1791592584530_k3fgdh",
+          "developerProfileId": "prof_1791592584530",
+          "canonicalName": "JavaScript",
+          "category": "Languages",
+          "claimedProficiency": "Mid",
+          "evidenceStatus": "CLAIMED"
+        },
+        {
+          "id": "sk_1791592584530_4amjw",
+          "developerProfileId": "prof_1791592584530",
+          "canonicalName": "Python",
+          "category": "Languages",
+          "claimedProficiency": "Mid",
+          "evidenceStatus": "CLAIMED"
+        },
+        {
+          "id": "sk_1791592584530_ixqire",
+          "developerProfileId": "prof_1791592584530",
+          "canonicalName": "Tailwind CSS",
+          "category": "Frontend",
+          "claimedProficiency": "Mid",
+          "evidenceStatus": "CLAIMED"
+        },
+        {
+          "id": "sk_1791592584530_z9ycb",
+          "developerProfileId": "prof_1791592584530",
+          "canonicalName": "AWS",
+          "category": "Cloud & DevOps",
+          "claimedProficiency": "Mid",
+          "evidenceStatus": "CLAIMED"
+        },
+        {
+          "id": "sk_1791592584530_sixa3b",
+          "developerProfileId": "prof_1791592584530",
+          "canonicalName": "Go",
+          "category": "Languages",
+          "claimedProficiency": "Mid",
+          "evidenceStatus": "CLAIMED"
+        },
+        {
+          "id": "sk_1791592584530_oqe33o",
+          "developerProfileId": "prof_1791592584530",
+          "canonicalName": "FastAPI",
+          "category": "Backend",
+          "claimedProficiency": "Mid",
+          "evidenceStatus": "CLAIMED"
+        }
+      ],
+      "experiences": [],
+      "projects": [
+        {
+          "id": "proj_1791592584530_igqn6",
+          "developerProfileId": "prof_1791592584530",
+          "name": "NFC-Canvas",
+          "description": "Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryUrl": "https://github.com/RasikhAli/NFC-Canvas",
+          "liveUrl": null,
+          "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "JavaScript"
+          ],
+          "complexityScore": 70,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true
+        },
+        {
+          "id": "proj_1791592584530_nd1x8j",
+          "developerProfileId": "prof_1791592584530",
+          "name": "StudyGrantHub",
+          "description": "Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryUrl": "https://github.com/RasikhAli/StudyGrantHub",
+          "liveUrl": null,
+          "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "JavaScript"
+          ],
+          "complexityScore": 70,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true
+        },
+        {
+          "id": "proj_1791592584530_761tog",
+          "developerProfileId": "prof_1791592584530",
+          "name": "InstantBoard",
+          "description": "Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryUrl": "https://github.com/RasikhAli/InstantBoard",
+          "liveUrl": null,
+          "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "JavaScript"
+          ],
+          "complexityScore": 70,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true
+        },
+        {
+          "id": "proj_1791592584531_fifqdo",
+          "developerProfileId": "prof_1791592584530",
+          "name": "AutoBleep-Pro",
+          "description": "Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryUrl": "https://github.com/RasikhAli/AutoBleep-Pro",
+          "liveUrl": null,
+          "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "JavaScript"
+          ],
+          "complexityScore": 70,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true
+        },
+        {
+          "id": "proj_1791592584531_va9cjb",
+          "developerProfileId": "prof_1791592584530",
+          "name": "QrGen",
+          "description": "Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryUrl": "https://github.com/RasikhAli/QrGen",
+          "liveUrl": null,
+          "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "JavaScript"
+          ],
+          "complexityScore": 70,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true
+        },
+        {
+          "id": "proj_1791592584531_pgasms",
+          "developerProfileId": "prof_1791592584530",
+          "name": "Examina-AI",
+          "description": "Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryUrl": "https://github.com/RasikhAli/Examina-AI",
+          "liveUrl": null,
+          "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "JavaScript"
+          ],
+          "complexityScore": 70,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true
+        },
+        {
+          "id": "proj_1791592584531_1966e",
+          "developerProfileId": "prof_1791592584530",
+          "name": "Bulk-Name-Checker",
+          "description": "Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryUrl": "https://github.com/RasikhAli/Bulk-Name-Checker",
+          "liveUrl": null,
+          "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "JavaScript"
+          ],
+          "complexityScore": 70,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true
+        },
+        {
+          "id": "proj_1791592584531_84cgc4",
+          "developerProfileId": "prof_1791592584530",
+          "name": "Superior-Academic-Tool",
+          "description": "Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryUrl": "https://github.com/RasikhAli/Superior-Academic-Tool",
+          "liveUrl": null,
+          "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "JavaScript"
+          ],
+          "complexityScore": 70,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true
+        },
+        {
+          "id": "proj_1791592584531_l333ap",
+          "developerProfileId": "prof_1791592584530",
+          "name": "Superior-NCEAC-Folder-Checker-Bot",
+          "description": "Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryUrl": "https://github.com/RasikhAli/Superior-NCEAC-Folder-Checker-Bot",
+          "liveUrl": null,
+          "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "JavaScript"
+          ],
+          "complexityScore": 70,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true
+        },
+        {
+          "id": "proj_1791592584531_zol6v7",
+          "developerProfileId": "prof_1791592584530",
+          "name": "Featured Work",
+          "description": "Showcase project documented on developer portfolio",
+          "repositoryUrl": null,
+          "liveUrl": null,
+          "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript"
+          ],
+          "complexityScore": 70,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true
+        },
+        {
+          "id": "proj_1791592584531_yz68ln",
+          "developerProfileId": "prof_1791592584530",
+          "name": "Key Contributors",
+          "description": "Showcase project documented on developer portfolio",
+          "repositoryUrl": null,
+          "liveUrl": null,
+          "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript"
+          ],
+          "complexityScore": 70,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true
+        },
+        {
+          "id": "proj_1791592584531_9jf95yx",
+          "developerProfileId": "prof_1791592584530",
+          "name": "Superior University",
+          "description": "Showcase project documented on developer portfolio",
+          "repositoryUrl": null,
+          "liveUrl": null,
+          "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript"
+          ],
+          "complexityScore": 70,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true
+        },
+        {
+          "id": "proj_1791592584531_j8vbrj",
+          "developerProfileId": "prof_1791592584530",
+          "name": "Students Testimonial",
+          "description": "Showcase project documented on developer portfolio",
+          "repositoryUrl": null,
+          "liveUrl": null,
+          "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript"
+          ],
+          "complexityScore": 70,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true
+        },
+        {
+          "id": "proj_1791592584531_znxvdj",
+          "developerProfileId": "prof_1791592584530",
+          "name": "Want to collaborate?",
+          "description": "Showcase project documented on developer portfolio",
+          "repositoryUrl": null,
+          "liveUrl": null,
+          "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript"
+          ],
+          "complexityScore": 70,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true
+        },
+        {
+          "id": "proj_1791592584531_nf5ypgnd",
+          "developerProfileId": "prof_1791592584530",
+          "name": "Rasikh Ali | Portfolio CMS",
+          "description": "Showcase project documented on developer portfolio",
+          "repositoryUrl": null,
+          "liveUrl": null,
+          "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript"
+          ],
+          "complexityScore": 70,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true
+        }
+      ],
+      "evidences": [
+        {
+          "id": "ev_1791592584530_ce3vi",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "SKILL",
+          "claimValue": "Observed reference to React on portfolio website",
+          "sourceExcerpt": "Found in portfolio page text at https://rasikhali.github.io/",
+          "confidence": 0.85,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.530Z"
+        },
+        {
+          "id": "ev_1791592584530_ct9c6",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "SKILL",
+          "claimValue": "Observed reference to Next.js on portfolio website",
+          "sourceExcerpt": "Found in portfolio page text at https://rasikhali.github.io/",
+          "confidence": 0.85,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.530Z"
+        },
+        {
+          "id": "ev_1791592584530_2u1vx9",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "SKILL",
+          "claimValue": "Observed reference to TypeScript on portfolio website",
+          "sourceExcerpt": "Found in portfolio page text at https://rasikhali.github.io/",
+          "confidence": 0.85,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.530Z"
+        },
+        {
+          "id": "ev_1791592584530_5sucld",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "SKILL",
+          "claimValue": "Observed reference to JavaScript on portfolio website",
+          "sourceExcerpt": "Found in portfolio page text at https://rasikhali.github.io/",
+          "confidence": 0.85,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.530Z"
+        },
+        {
+          "id": "ev_1791592584530_w5d4p",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "SKILL",
+          "claimValue": "Observed reference to Python on portfolio website",
+          "sourceExcerpt": "Found in portfolio page text at https://rasikhali.github.io/",
+          "confidence": 0.85,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.530Z"
+        },
+        {
+          "id": "ev_1791592584530_gwihfk",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "SKILL",
+          "claimValue": "Observed reference to Tailwind CSS on portfolio website",
+          "sourceExcerpt": "Found in portfolio page text at https://rasikhali.github.io/",
+          "confidence": 0.85,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.530Z"
+        },
+        {
+          "id": "ev_1791592584530_bpmou",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "SKILL",
+          "claimValue": "Observed reference to AWS on portfolio website",
+          "sourceExcerpt": "Found in portfolio page text at https://rasikhali.github.io/",
+          "confidence": 0.85,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.530Z"
+        },
+        {
+          "id": "ev_1791592584530_7q1f68",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "SKILL",
+          "claimValue": "Observed reference to Go on portfolio website",
+          "sourceExcerpt": "Found in portfolio page text at https://rasikhali.github.io/",
+          "confidence": 0.85,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.530Z"
+        },
+        {
+          "id": "ev_1791592584530_9rpst",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "SKILL",
+          "claimValue": "Observed reference to FastAPI on portfolio website",
+          "sourceExcerpt": "Found in portfolio page text at https://rasikhali.github.io/",
+          "confidence": 0.85,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.530Z"
+        },
+        {
+          "id": "ev_1791592584530_qpw9g",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "PROJECT",
+          "claimValue": "Documented project \"NFC-Canvas\" verified from portfolio",
+          "sourceExcerpt": "Found on https://rasikhali.github.io/: Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryRef": "https://github.com/RasikhAli/NFC-Canvas",
+          "confidence": 0.9,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.530Z"
+        },
+        {
+          "id": "ev_1791592584530_dalcpi",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "PROJECT",
+          "claimValue": "Documented project \"StudyGrantHub\" verified from portfolio",
+          "sourceExcerpt": "Found on https://rasikhali.github.io/: Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryRef": "https://github.com/RasikhAli/StudyGrantHub",
+          "confidence": 0.9,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.530Z"
+        },
+        {
+          "id": "ev_1791592584530_jr868",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "PROJECT",
+          "claimValue": "Documented project \"InstantBoard\" verified from portfolio",
+          "sourceExcerpt": "Found on https://rasikhali.github.io/: Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryRef": "https://github.com/RasikhAli/InstantBoard",
+          "confidence": 0.9,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.530Z"
+        },
+        {
+          "id": "ev_1791592584531_p366hj",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "PROJECT",
+          "claimValue": "Documented project \"AutoBleep-Pro\" verified from portfolio",
+          "sourceExcerpt": "Found on https://rasikhali.github.io/: Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryRef": "https://github.com/RasikhAli/AutoBleep-Pro",
+          "confidence": 0.9,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.531Z"
+        },
+        {
+          "id": "ev_1791592584531_eeac3f",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "PROJECT",
+          "claimValue": "Documented project \"QrGen\" verified from portfolio",
+          "sourceExcerpt": "Found on https://rasikhali.github.io/: Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryRef": "https://github.com/RasikhAli/QrGen",
+          "confidence": 0.9,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.531Z"
+        },
+        {
+          "id": "ev_1791592584531_a88489",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "PROJECT",
+          "claimValue": "Documented project \"Examina-AI\" verified from portfolio",
+          "sourceExcerpt": "Found on https://rasikhali.github.io/: Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryRef": "https://github.com/RasikhAli/Examina-AI",
+          "confidence": 0.9,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.531Z"
+        },
+        {
+          "id": "ev_1791592584531_ek3h2",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "PROJECT",
+          "claimValue": "Documented project \"Bulk-Name-Checker\" verified from portfolio",
+          "sourceExcerpt": "Found on https://rasikhali.github.io/: Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryRef": "https://github.com/RasikhAli/Bulk-Name-Checker",
+          "confidence": 0.9,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.531Z"
+        },
+        {
+          "id": "ev_1791592584531_uok2t",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "PROJECT",
+          "claimValue": "Documented project \"Superior-Academic-Tool\" verified from portfolio",
+          "sourceExcerpt": "Found on https://rasikhali.github.io/: Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryRef": "https://github.com/RasikhAli/Superior-Academic-Tool",
+          "confidence": 0.9,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.531Z"
+        },
+        {
+          "id": "ev_1791592584531_szte4k",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "PROJECT",
+          "claimValue": "Documented project \"Superior-NCEAC-Folder-Checker-Bot\" verified from portfolio",
+          "sourceExcerpt": "Found on https://rasikhali.github.io/: Project repository linked from portfolio at https://rasikhali.github.io/",
+          "repositoryRef": "https://github.com/RasikhAli/Superior-NCEAC-Folder-Checker-Bot",
+          "confidence": 0.9,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.531Z"
+        },
+        {
+          "id": "ev_1791592584531_lg1p3q",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "PROJECT",
+          "claimValue": "Documented project \"Featured Work\" verified from portfolio",
+          "sourceExcerpt": "Found on https://rasikhali.github.io/: Showcase project documented on developer portfolio",
+          "repositoryRef": null,
+          "confidence": 0.9,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.531Z"
+        },
+        {
+          "id": "ev_1791592584531_3acng",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "PROJECT",
+          "claimValue": "Documented project \"Key Contributors\" verified from portfolio",
+          "sourceExcerpt": "Found on https://rasikhali.github.io/: Showcase project documented on developer portfolio",
+          "repositoryRef": null,
+          "confidence": 0.9,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.531Z"
+        },
+        {
+          "id": "ev_1791592584531_jvti1",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "PROJECT",
+          "claimValue": "Documented project \"Superior University\" verified from portfolio",
+          "sourceExcerpt": "Found on https://rasikhali.github.io/: Showcase project documented on developer portfolio",
+          "repositoryRef": null,
+          "confidence": 0.9,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.531Z"
+        },
+        {
+          "id": "ev_1791592584531_xksx3h",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "PROJECT",
+          "claimValue": "Documented project \"Students Testimonial\" verified from portfolio",
+          "sourceExcerpt": "Found on https://rasikhali.github.io/: Showcase project documented on developer portfolio",
+          "repositoryRef": null,
+          "confidence": 0.9,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.531Z"
+        },
+        {
+          "id": "ev_1791592584531_wean8",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "PROJECT",
+          "claimValue": "Documented project \"Want to collaborate?\" verified from portfolio",
+          "sourceExcerpt": "Found on https://rasikhali.github.io/: Showcase project documented on developer portfolio",
+          "repositoryRef": null,
+          "confidence": 0.9,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.531Z"
+        },
+        {
+          "id": "ev_1791592584531_dde4z4",
+          "developerProfileId": "prof_1791592584530",
+          "sourceId": "src_1791592584530",
+          "claimType": "PROJECT",
+          "claimValue": "Documented project \"Rasikh Ali | Portfolio CMS\" verified from portfolio",
+          "sourceExcerpt": "Found on https://rasikhali.github.io/: Showcase project documented on developer portfolio",
+          "repositoryRef": null,
+          "confidence": 0.9,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:36:24.531Z"
+        }
+      ]
+    },
+    {
+      "id": "prof_1791592493419",
+      "ownerId": "demo-user-1",
+      "name": "Rasikh Ali",
+      "headline": "A skilled software developer with experience in various programming languages and tools. Committed to delivering high-quality software solutions.",
+      "summary": "A skilled software developer with experience in various programming languages and tools. Committed to delivering high-quality software solutions.",
+      "githubUsername": "RasikhAli",
+      "websiteUrl": "https://rasikhali.github.io/",
+      "location": "Lahore, Pakistan",
+      "completeness": 100,
+      "createdAt": "2026-10-10T00:34:53.419Z",
+      "updatedAt": "2026-10-10T00:34:53.420Z",
+      "sources": [
+        {
+          "id": "src_1791592493419",
+          "developerProfileId": "prof_1791592493419",
+          "sourceType": "GITHUB_PROFILE",
+          "sourceUrl": "https://github.com/RasikhAli",
+          "status": "COMPLETED",
+          "lastFetchedAt": "2026-10-10T00:34:53.419Z",
+          "createdAt": "2026-10-10T00:34:53.419Z"
+        }
+      ],
+      "skills": [
+        {
+          "id": "sk_1791592493419_sogv6",
+          "developerProfileId": "prof_1791592493419",
+          "canonicalName": "Python",
+          "category": "Languages",
+          "claimedProficiency": "Senior",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk_1791592493419_2kq1wm",
+          "developerProfileId": "prof_1791592493419",
+          "canonicalName": "HTML",
+          "category": "Frontend",
+          "claimedProficiency": "Senior",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk_1791592493419_klz652",
+          "developerProfileId": "prof_1791592493419",
+          "canonicalName": "Java",
+          "category": "Languages",
+          "claimedProficiency": "Senior",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk_1791592493419_xrp96o",
+          "developerProfileId": "prof_1791592493419",
+          "canonicalName": "Jupyter Notebook",
+          "category": "Tools",
+          "claimedProficiency": "Senior",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk_1791592493419_29ksmi",
+          "developerProfileId": "prof_1791592493419",
+          "canonicalName": "JavaScript",
+          "category": "Languages",
+          "claimedProficiency": "Senior",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk_1791592493419_bijets",
+          "developerProfileId": "prof_1791592493419",
+          "canonicalName": "C++",
+          "category": "Languages",
+          "claimedProficiency": "Senior",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk_1791592493419_opxtrv",
+          "developerProfileId": "prof_1791592493419",
+          "canonicalName": "TypeScript",
+          "category": "Languages",
+          "claimedProficiency": "Mid",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk_1791592493419_764f7b",
+          "developerProfileId": "prof_1791592493419",
+          "canonicalName": "PHP",
+          "category": "Languages",
+          "claimedProficiency": "Mid",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk_1791592493419_4cu10s",
+          "developerProfileId": "prof_1791592493419",
+          "canonicalName": "LUA",
+          "category": "Tools",
+          "claimedProficiency": "Mid",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk_1791592493419_b8axc",
+          "developerProfileId": "prof_1791592493419",
+          "canonicalName": "CSS",
+          "category": "Frontend",
+          "claimedProficiency": "Mid",
+          "evidenceStatus": "VERIFIED"
+        }
+      ],
+      "experiences": [],
+      "projects": [
+        {
+          "id": "proj_1791592493419_txj6ta",
+          "developerProfileId": "prof_1791592493419",
+          "name": "RasikhAli",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/RasikhAli",
+          "liveUrl": null,
+          "technologies": [],
+          "complexityScore": 75,
+          "hasTests": false,
+          "hasCI": true,
+          "hasDocs": true,
+          "starsCount": 1,
+          "primaryLanguage": null
+        },
+        {
+          "id": "proj_1791592493419_8bfuxw",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Falling-Notes",
+          "description": "A real-time 3D musical performance and MIDI visualizer built with React 19, Three.js, and Tone.js.",
+          "repositoryUrl": "https://github.com/RasikhAli/Falling-Notes",
+          "liveUrl": null,
+          "technologies": [
+            "TypeScript"
+          ],
+          "complexityScore": 55,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true,
+          "starsCount": 2,
+          "primaryLanguage": "TypeScript"
+        },
+        {
+          "id": "proj_1791592493419_r5fum",
+          "developerProfileId": "prof_1791592493419",
+          "name": "RasikhAli.github.io",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/RasikhAli.github.io",
+          "liveUrl": null,
+          "technologies": [
+            "TypeScript"
+          ],
+          "complexityScore": 75,
+          "hasTests": false,
+          "hasCI": true,
+          "hasDocs": true,
+          "starsCount": 0,
+          "primaryLanguage": "TypeScript"
+        },
+        {
+          "id": "proj_1791592493419_i4zp2b",
+          "developerProfileId": "prof_1791592493419",
+          "name": "CinebyHub",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/CinebyHub",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 75,
+          "hasTests": false,
+          "hasCI": true,
+          "hasDocs": true,
+          "starsCount": 1,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493419_88co1o",
+          "developerProfileId": "prof_1791592493419",
+          "name": "InstantBoard",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/InstantBoard",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 55,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true,
+          "starsCount": 0,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493419_gv2as",
+          "developerProfileId": "prof_1791592493419",
+          "name": "trontrail",
+          "description": "A premium, high-performance, and visually stunning TRON-style trail rendering system for Multi Theft Auto: San Andreas (MTA:SA).",
+          "repositoryUrl": "https://github.com/RasikhAli/trontrail",
+          "liveUrl": null,
+          "technologies": [
+            "Lua"
+          ],
+          "complexityScore": 55,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true,
+          "starsCount": 1,
+          "primaryLanguage": "Lua"
+        },
+        {
+          "id": "proj_1791592493419_aotal",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Agentic-AI-Course-Core-Repository",
+          "description": "his project is a structured learning curriculum and codebase designed to teach the fundamentals and advanced topics of Agentic AI.",
+          "repositoryUrl": "https://github.com/RasikhAli/Agentic-AI-Course-Core-Repository",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 55,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true,
+          "starsCount": 0,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493419_0gbey98",
+          "developerProfileId": "prof_1791592493419",
+          "name": "AutoBleep-Pro",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/AutoBleep-Pro",
+          "liveUrl": null,
+          "technologies": [
+            "JavaScript"
+          ],
+          "complexityScore": 55,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true,
+          "starsCount": 0,
+          "primaryLanguage": "JavaScript"
+        },
+        {
+          "id": "proj_1791592493420_fxmdck",
+          "developerProfileId": "prof_1791592493419",
+          "name": "CGPA-Calculator",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/CGPA-Calculator",
+          "liveUrl": null,
+          "technologies": [
+            "HTML"
+          ],
+          "complexityScore": 55,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true,
+          "starsCount": 3,
+          "primaryLanguage": "HTML"
+        },
+        {
+          "id": "proj_1791592493420_khkqsn",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Superior---Automated-Folder-Files-Manager",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Superior---Automated-Folder-Files-Manager",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 55,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true,
+          "starsCount": 1,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493420_2151i",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Bulk-Git-Repo-Downloader",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Bulk-Git-Repo-Downloader",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 55,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true,
+          "starsCount": 2,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493420_v0fm",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Ramadan-Tracker",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Ramadan-Tracker",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 75,
+          "hasTests": true,
+          "hasCI": false,
+          "hasDocs": true,
+          "starsCount": 0,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493420_v1dux7",
+          "developerProfileId": "prof_1791592493419",
+          "name": "AgentX-FinTech-AI-Wrapper",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/AgentX-FinTech-AI-Wrapper",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 55,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true,
+          "starsCount": 1,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493420_4vdur",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Property-Information-Extractor",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Property-Information-Extractor",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 55,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true,
+          "starsCount": 0,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493420_122ihm",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Tic-Tac-Toe-Web-App",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Tic-Tac-Toe-Web-App",
+          "liveUrl": null,
+          "technologies": [
+            "HTML"
+          ],
+          "complexityScore": 55,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": true,
+          "starsCount": 1,
+          "primaryLanguage": "HTML"
+        },
+        {
+          "id": "proj_1791592493420_flm98",
+          "developerProfileId": "prof_1791592493419",
+          "name": "House-Price-Prediction-Web-App",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/House-Price-Prediction-Web-App",
+          "liveUrl": null,
+          "technologies": [],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": null
+        },
+        {
+          "id": "proj_1791592493420_qu4jdh",
+          "developerProfileId": "prof_1791592493419",
+          "name": "SLM-Mini-Chatbot",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/SLM-Mini-Chatbot",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 0,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493420_tb98m",
+          "developerProfileId": "prof_1791592493419",
+          "name": "admission-voice-bot",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/admission-voice-bot",
+          "liveUrl": null,
+          "technologies": [
+            "HTML"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 0,
+          "primaryLanguage": "HTML"
+        },
+        {
+          "id": "proj_1791592493420_wgq7hq",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Moon-Wallpaper-Generator",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Moon-Wallpaper-Generator",
+          "liveUrl": null,
+          "technologies": [
+            "JavaScript"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 0,
+          "primaryLanguage": "JavaScript"
+        },
+        {
+          "id": "proj_1791592493420_m9jnqj",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Sarcasm-Detection",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Sarcasm-Detection",
+          "liveUrl": null,
+          "technologies": [
+            "Jupyter Notebook"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Jupyter Notebook"
+        },
+        {
+          "id": "proj_1791592493420_qfod7",
+          "developerProfileId": "prof_1791592493419",
+          "name": "YETP",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/YETP",
+          "liveUrl": null,
+          "technologies": [
+            "PHP"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "PHP"
+        },
+        {
+          "id": "proj_1791592493420_mcwxe",
+          "developerProfileId": "prof_1791592493419",
+          "name": "QRApp",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/QRApp",
+          "liveUrl": null,
+          "technologies": [
+            "Java"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Java"
+        },
+        {
+          "id": "proj_1791592493420_gw7ljr",
+          "developerProfileId": "prof_1791592493419",
+          "name": "AttendanceSystem",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/AttendanceSystem",
+          "liveUrl": null,
+          "technologies": [
+            "Java"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Java"
+        },
+        {
+          "id": "proj_1791592493420_551s06",
+          "developerProfileId": "prof_1791592493419",
+          "name": "AminMaktab",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/AminMaktab",
+          "liveUrl": null,
+          "technologies": [
+            "Java"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Java"
+        },
+        {
+          "id": "proj_1791592493420_5b1w9o",
+          "developerProfileId": "prof_1791592493419",
+          "name": "MOJO",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/MOJO",
+          "liveUrl": null,
+          "technologies": [],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": null
+        },
+        {
+          "id": "proj_1791592493420_vaf4l",
+          "developerProfileId": "prof_1791592493419",
+          "name": "TicTacToe",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/TicTacToe",
+          "liveUrl": null,
+          "technologies": [
+            "C++"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "C++"
+        },
+        {
+          "id": "proj_1791592493420_485ot1",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Shopko",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Shopko",
+          "liveUrl": null,
+          "technologies": [
+            "Java"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Java"
+        },
+        {
+          "id": "proj_1791592493420_15cyhu",
+          "developerProfileId": "prof_1791592493419",
+          "name": "HousingPricePrediction",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/HousingPricePrediction",
+          "liveUrl": null,
+          "technologies": [
+            "Jupyter Notebook"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Jupyter Notebook"
+        },
+        {
+          "id": "proj_1791592493420_x7l5fk",
+          "developerProfileId": "prof_1791592493419",
+          "name": "LoanPrediction",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/LoanPrediction",
+          "liveUrl": null,
+          "technologies": [
+            "Jupyter Notebook"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Jupyter Notebook"
+        },
+        {
+          "id": "proj_1791592493420_44kpmm",
+          "developerProfileId": "prof_1791592493419",
+          "name": "NYCTaxiTrip",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/NYCTaxiTrip",
+          "liveUrl": null,
+          "technologies": [
+            "Jupyter Notebook"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Jupyter Notebook"
+        },
+        {
+          "id": "proj_1791592493420_qjrxg",
+          "developerProfileId": "prof_1791592493419",
+          "name": "PTS",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/PTS",
+          "liveUrl": null,
+          "technologies": [
+            "C++"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "C++"
+        },
+        {
+          "id": "proj_1791592493420_nhlr0h",
+          "developerProfileId": "prof_1791592493419",
+          "name": "ChessGame",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/ChessGame",
+          "liveUrl": null,
+          "technologies": [
+            "C++"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "C++"
+        },
+        {
+          "id": "proj_1791592493420_mbyebl",
+          "developerProfileId": "prof_1791592493419",
+          "name": "StudentManagementSystem",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/StudentManagementSystem",
+          "liveUrl": null,
+          "technologies": [
+            "Java"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Java"
+        },
+        {
+          "id": "proj_1791592493420_slsx6k",
+          "developerProfileId": "prof_1791592493419",
+          "name": "SuperMobileAccessories",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/SuperMobileAccessories",
+          "liveUrl": null,
+          "technologies": [
+            "PHP"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "PHP"
+        },
+        {
+          "id": "proj_1791592493420_92bgzj",
+          "developerProfileId": "prof_1791592493419",
+          "name": "VotingSystem",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/VotingSystem",
+          "liveUrl": null,
+          "technologies": [
+            "Java"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Java"
+        },
+        {
+          "id": "proj_1791592493420_ofqiqg",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Robo-Litation",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Robo-Litation",
+          "liveUrl": null,
+          "technologies": [],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": null
+        },
+        {
+          "id": "proj_1791592493420_w298nv",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Github_Repo_Listing",
+          "description": "A Python Script to display all of your Public and Private repositories using Personal Access Token ",
+          "repositoryUrl": "https://github.com/RasikhAli/Github_Repo_Listing",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493420_y0p6t8",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Github_Repo_Public_to_Private",
+          "description": "A Python Script to convert all of your Public repositories visibility to Private using Personal Access Token ",
+          "repositoryUrl": "https://github.com/RasikhAli/Github_Repo_Public_to_Private",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493420_3sze9m",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Github_Repo_Private_to_Public",
+          "description": "A Python Script to convert all of your Private repositories visibility to Public using Personal Access Token ",
+          "repositoryUrl": "https://github.com/RasikhAli/Github_Repo_Private_to_Public",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493420_za2cke",
+          "developerProfileId": "prof_1791592493419",
+          "name": "GitHub_Repo_Visibility_Management",
+          "description": "A Python Script to manage the visibility of your repositories using Personal Access Token",
+          "repositoryUrl": "https://github.com/RasikhAli/GitHub_Repo_Visibility_Management",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493420_6fjje",
+          "developerProfileId": "prof_1791592493419",
+          "name": "CSVandXLSXEditor",
+          "description": "A web-based application that allows users to upload, view, and edit CSV and XLSX files directly in the browser",
+          "repositoryUrl": "https://github.com/RasikhAli/CSVandXLSXEditor",
+          "liveUrl": null,
+          "technologies": [
+            "HTML"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "HTML"
+        },
+        {
+          "id": "proj_1791592493420_9yep5b",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Web-Monitor-and-Alert-System-using-Google-Email-App-Password",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Web-Monitor-and-Alert-System-using-Google-Email-App-Password",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493420_9y2gdo",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Flask-MOV-to-WEBM-Converter",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Flask-MOV-to-WEBM-Converter",
+          "liveUrl": null,
+          "technologies": [
+            "HTML"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "HTML"
+        },
+        {
+          "id": "proj_1791592493420_0alhbhg",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Titanic-Passenger-Survival",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Titanic-Passenger-Survival",
+          "liveUrl": null,
+          "technologies": [
+            "HTML"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "HTML"
+        },
+        {
+          "id": "proj_1791592493420_cu4xjyh",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Online-HTML-Editor-and-Viewer",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Online-HTML-Editor-and-Viewer",
+          "liveUrl": null,
+          "technologies": [
+            "JavaScript"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 2,
+          "primaryLanguage": "JavaScript"
+        },
+        {
+          "id": "proj_1791592493420_uw7j6",
+          "developerProfileId": "prof_1791592493419",
+          "name": "QR-Code-Generator",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/QR-Code-Generator",
+          "liveUrl": null,
+          "technologies": [
+            "HTML"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "HTML"
+        },
+        {
+          "id": "proj_1791592493420_n6lgkg",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Internship",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Internship",
+          "liveUrl": null,
+          "technologies": [
+            "Jupyter Notebook"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Jupyter Notebook"
+        },
+        {
+          "id": "proj_1791592493420_9gsnjq",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Life-Visualizer",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Life-Visualizer",
+          "liveUrl": null,
+          "technologies": [
+            "HTML"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "HTML"
+        },
+        {
+          "id": "proj_1791592493420_wdkbwq",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Instagram-Media-Extractor",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Instagram-Media-Extractor",
+          "liveUrl": null,
+          "technologies": [
+            "HTML"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "HTML"
+        },
+        {
+          "id": "proj_1791592493420_25e5aj",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Jigsaw-Puzzle-Game",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Jigsaw-Puzzle-Game",
+          "liveUrl": null,
+          "technologies": [
+            "HTML"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 2,
+          "primaryLanguage": "HTML"
+        },
+        {
+          "id": "proj_1791592493420_21aeve",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Leads-Extractor",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Leads-Extractor",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493420_81ysnn",
+          "developerProfileId": "prof_1791592493419",
+          "name": "SuperiorUniversity",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/SuperiorUniversity",
+          "liveUrl": null,
+          "technologies": [],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": null
+        },
+        {
+          "id": "proj_1791592493420_2era9",
+          "developerProfileId": "prof_1791592493419",
+          "name": "CallBot-Generic",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/CallBot-Generic",
+          "liveUrl": null,
+          "technologies": [
+            "HTML"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "HTML"
+        },
+        {
+          "id": "proj_1791592493420_17gnd",
+          "developerProfileId": "prof_1791592493419",
+          "name": "StreamLitBot",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/StreamLitBot",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493420_qd5vqc",
+          "developerProfileId": "prof_1791592493419",
+          "name": "CustomURLShortener",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/CustomURLShortener",
+          "liveUrl": null,
+          "technologies": [
+            "HTML"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "HTML"
+        },
+        {
+          "id": "proj_1791592493420_vqovie",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Blockchain-Visualization",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Blockchain-Visualization",
+          "liveUrl": null,
+          "technologies": [
+            "CSS"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 2,
+          "primaryLanguage": "CSS"
+        },
+        {
+          "id": "proj_1791592493420_zh0u2",
+          "developerProfileId": "prof_1791592493419",
+          "name": "fastapi-auth-app",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/fastapi-auth-app",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493420_4cdes",
+          "developerProfileId": "prof_1791592493419",
+          "name": "setup_chromedriver",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/setup_chromedriver",
+          "liveUrl": null,
+          "technologies": [
+            "Python"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "Python"
+        },
+        {
+          "id": "proj_1791592493420_ayalk",
+          "developerProfileId": "prof_1791592493419",
+          "name": "Ayah-Snap",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/Ayah-Snap",
+          "liveUrl": null,
+          "technologies": [
+            "HTML"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "HTML"
+        },
+        {
+          "id": "proj_1791592493420_gbai7",
+          "developerProfileId": "prof_1791592493419",
+          "name": "YouTube-Media-Extractor",
+          "description": null,
+          "repositoryUrl": "https://github.com/RasikhAli/YouTube-Media-Extractor",
+          "liveUrl": null,
+          "technologies": [
+            "HTML"
+          ],
+          "complexityScore": 45,
+          "hasTests": false,
+          "hasCI": false,
+          "hasDocs": false,
+          "starsCount": 1,
+          "primaryLanguage": "HTML"
+        }
+      ],
+      "evidences": [
+        {
+          "id": "ev_1791592493419_nr0l0e",
+          "developerProfileId": "prof_1791592493419",
+          "sourceId": "src_1791592493419",
+          "claimType": "SKILL",
+          "claimValue": "Observed Python as primary language across 18 public repositories",
+          "repositoryRef": "github.com/RasikhAli",
+          "confidence": 0.95,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:34:53.419Z"
+        },
+        {
+          "id": "ev_1791592493419_u8myc",
+          "developerProfileId": "prof_1791592493419",
+          "sourceId": "src_1791592493419",
+          "claimType": "SKILL",
+          "claimValue": "Observed HTML as primary language across 14 public repositories",
+          "repositoryRef": "github.com/RasikhAli",
+          "confidence": 0.95,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:34:53.419Z"
+        },
+        {
+          "id": "ev_1791592493419_egxjxi",
+          "developerProfileId": "prof_1791592493419",
+          "sourceId": "src_1791592493419",
+          "claimType": "SKILL",
+          "claimValue": "Observed Java as primary language across 6 public repositories",
+          "repositoryRef": "github.com/RasikhAli",
+          "confidence": 0.95,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:34:53.419Z"
+        },
+        {
+          "id": "ev_1791592493419_rcdyz9",
+          "developerProfileId": "prof_1791592493419",
+          "sourceId": "src_1791592493419",
+          "claimType": "SKILL",
+          "claimValue": "Observed Jupyter Notebook as primary language across 5 public repositories",
+          "repositoryRef": "github.com/RasikhAli",
+          "confidence": 0.95,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:34:53.419Z"
+        },
+        {
+          "id": "ev_1791592493419_cb4nim",
+          "developerProfileId": "prof_1791592493419",
+          "sourceId": "src_1791592493419",
+          "claimType": "SKILL",
+          "claimValue": "Observed JavaScript as primary language across 3 public repositories",
+          "repositoryRef": "github.com/RasikhAli",
+          "confidence": 0.95,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:34:53.419Z"
+        },
+        {
+          "id": "ev_1791592493419_jm87fp",
+          "developerProfileId": "prof_1791592493419",
+          "sourceId": "src_1791592493419",
+          "claimType": "SKILL",
+          "claimValue": "Observed C++ as primary language across 3 public repositories",
+          "repositoryRef": "github.com/RasikhAli",
+          "confidence": 0.95,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:34:53.419Z"
+        },
+        {
+          "id": "ev_1791592493419_rga97j",
+          "developerProfileId": "prof_1791592493419",
+          "sourceId": "src_1791592493419",
+          "claimType": "SKILL",
+          "claimValue": "Observed TypeScript as primary language across 2 public repositories",
+          "repositoryRef": "github.com/RasikhAli",
+          "confidence": 0.95,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:34:53.419Z"
+        },
+        {
+          "id": "ev_1791592493419_c4li18",
+          "developerProfileId": "prof_1791592493419",
+          "sourceId": "src_1791592493419",
+          "claimType": "SKILL",
+          "claimValue": "Observed PHP as primary language across 2 public repositories",
+          "repositoryRef": "github.com/RasikhAli",
+          "confidence": 0.95,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:34:53.419Z"
+        },
+        {
+          "id": "ev_1791592493419_19edin",
+          "developerProfileId": "prof_1791592493419",
+          "sourceId": "src_1791592493419",
+          "claimType": "SKILL",
+          "claimValue": "Observed LUA as primary language across 1 public repositories",
+          "repositoryRef": "github.com/RasikhAli",
+          "confidence": 0.95,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:34:53.419Z"
+        },
+        {
+          "id": "ev_1791592493419_i83w5j",
+          "developerProfileId": "prof_1791592493419",
+          "sourceId": "src_1791592493419",
+          "claimType": "SKILL",
+          "claimValue": "Observed CSS as primary language across 1 public repositories",
+          "repositoryRef": "github.com/RasikhAli",
+          "confidence": 0.95,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:34:53.419Z"
+        },
+        {
+          "id": "ev_1791592493419_csbzu",
+          "developerProfileId": "prof_1791592493419",
+          "sourceId": "src_1791592493419",
+          "claimType": "ENGINEERING_PRACTICE",
+          "claimValue": "Continuous integration workflow (.github/workflows) verified in repository \"RasikhAli\"",
+          "repositoryRef": "https://github.com/RasikhAli/RasikhAli",
+          "confidence": 1,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:34:53.419Z"
+        },
+        {
+          "id": "ev_1791592493419_xgm4cx",
+          "developerProfileId": "prof_1791592493419",
+          "sourceId": "src_1791592493419",
+          "claimType": "ENGINEERING_PRACTICE",
+          "claimValue": "Continuous integration workflow (.github/workflows) verified in repository \"RasikhAli.github.io\"",
+          "repositoryRef": "https://github.com/RasikhAli/RasikhAli.github.io",
+          "confidence": 1,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:34:53.419Z"
+        },
+        {
+          "id": "ev_1791592493419_kzrtvul",
+          "developerProfileId": "prof_1791592493419",
+          "sourceId": "src_1791592493419",
+          "claimType": "ENGINEERING_PRACTICE",
+          "claimValue": "Continuous integration workflow (.github/workflows) verified in repository \"CinebyHub\"",
+          "repositoryRef": "https://github.com/RasikhAli/CinebyHub",
+          "confidence": 1,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:34:53.419Z"
+        },
+        {
+          "id": "ev_1791592493420_lzbbdj",
+          "developerProfileId": "prof_1791592493419",
+          "sourceId": "src_1791592493419",
+          "claimType": "ENGINEERING_PRACTICE",
+          "claimValue": "Automated test configuration detected in repository \"Ramadan-Tracker\": Dedicated test directory \"tests/\"",
+          "repositoryRef": "https://github.com/RasikhAli/Ramadan-Tracker",
+          "confidence": 0.9,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-10T00:34:53.420Z"
+        }
+      ]
+    },
+    {
+      "id": "prof-1",
+      "ownerId": "demo-user-1",
+      "name": "Sarah Chen",
+      "headline": "Senior Full-Stack & Distributed Systems Engineer",
+      "summary": "8+ years building high-concurrency cloud native architectures, real-time analytics, and TypeScript/Node.js/Go platforms with rigorous testing and automated CI.",
+      "email": "sarah.chen@example.dev",
+      "location": "San Francisco, CA (Remote)",
+      "websiteUrl": "https://sarahchen.dev",
+      "githubUsername": "sarahchen-dev",
+      "linkedinUrl": "https://linkedin.com/in/sarahchen-lead",
+      "completeness": 92,
+      "createdAt": "2026-10-02T23:01:08.713Z",
+      "updatedAt": "2026-10-08T23:01:08.713Z",
+      "sources": [
+        {
+          "id": "src-1",
+          "developerProfileId": "prof-1",
+          "sourceType": "CV_DOCUMENT",
+          "status": "COMPLETED",
+          "fileName": "Sarah_Chen_Principal_CV.pdf",
+          "fileSize": 182400,
+          "createdAt": "2026-10-02T23:01:08.713Z"
+        },
+        {
+          "id": "src-2",
+          "developerProfileId": "prof-1",
+          "sourceType": "GITHUB_PROFILE",
+          "sourceUrl": "https://github.com/sarahchen-dev",
+          "status": "COMPLETED",
+          "lastFetchedAt": "2026-10-09T23:01:08.713Z",
+          "createdAt": "2026-10-03T23:01:08.713Z"
+        }
+      ],
+      "skills": [
+        {
+          "id": "sk-1",
+          "developerProfileId": "prof-1",
+          "canonicalName": "TypeScript",
+          "category": "Languages",
+          "claimedProficiency": "Expert",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk-2",
+          "developerProfileId": "prof-1",
+          "canonicalName": "React",
+          "category": "Frontend",
+          "claimedProficiency": "Senior",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk-3",
+          "developerProfileId": "prof-1",
+          "canonicalName": "Node.js",
+          "category": "Backend",
+          "claimedProficiency": "Expert",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk-4",
+          "developerProfileId": "prof-1",
+          "canonicalName": "PostgreSQL",
+          "category": "Databases",
+          "claimedProficiency": "Senior",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk-5",
+          "developerProfileId": "prof-1",
+          "canonicalName": "Go",
+          "category": "Languages",
+          "claimedProficiency": "Senior",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk-6",
+          "developerProfileId": "prof-1",
+          "canonicalName": "Docker",
+          "category": "Cloud & DevOps",
+          "claimedProficiency": "Senior",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk-7",
+          "developerProfileId": "prof-1",
+          "canonicalName": "Kubernetes",
+          "category": "Cloud & DevOps",
+          "claimedProficiency": "Mid",
+          "evidenceStatus": "CLAIMED"
+        },
+        {
+          "id": "sk-8",
+          "developerProfileId": "prof-1",
+          "canonicalName": "CI/CD",
+          "category": "Cloud & DevOps",
+          "claimedProficiency": "Senior",
+          "evidenceStatus": "VERIFIED"
+        }
+      ],
+      "experiences": [
+        {
+          "id": "exp-1",
+          "developerProfileId": "prof-1",
+          "employer": "ScaleStream Data",
+          "title": "Staff Software Engineer",
+          "description": "Led core ingestion infrastructure handling 2.4B events/day using Go and Node.js microservices. Implemented end-to-end automated testing pipelines reducing deployment incidents by 44%.",
+          "location": "San Francisco, CA",
+          "startDate": "2021-03-01",
+          "isCurrent": true,
+          "technologies": [
+            "Go",
+            "TypeScript",
+            "PostgreSQL",
+            "Docker",
+            "Kafka"
+          ]
+        },
+        {
+          "id": "exp-2",
+          "developerProfileId": "prof-1",
+          "employer": "Nexus Cloud Systems",
+          "title": "Senior Backend Developer",
+          "description": "Designed resilient GraphQL and REST APIs in Node.js backed by PostgreSQL and Redis. Spearheaded unit and contract testing with Jest and Supertest.",
+          "location": "Remote",
+          "startDate": "2018-06-01",
+          "endDate": "2021-02-01",
+          "isCurrent": false,
+          "technologies": [
+            "Node.js",
+            "TypeScript",
+            "React",
+            "PostgreSQL",
+            "Redis"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "id": "proj-1",
+          "developerProfileId": "prof-1",
+          "name": "streamline-db-cdc",
+          "description": "High-performance Change Data Capture connector for PostgreSQL with real-time replication.",
+          "repositoryUrl": "https://github.com/sarahchen-dev/streamline-db-cdc",
+          "technologies": [
+            "Go",
+            "PostgreSQL",
+            "Docker"
+          ],
+          "complexityScore": 88,
+          "hasTests": true,
+          "hasCI": true,
+          "hasDocs": true,
+          "starsCount": 142,
+          "primaryLanguage": "Go"
+        },
+        {
+          "id": "proj-2",
+          "developerProfileId": "prof-1",
+          "name": "react-flow-analytics",
+          "description": "Interactive real-time analytics dashboard with React 19, TypeScript, and Tailwind CSS.",
+          "repositoryUrl": "https://github.com/sarahchen-dev/react-flow-analytics",
+          "technologies": [
+            "React",
+            "TypeScript",
+            "Tailwind CSS"
+          ],
+          "complexityScore": 78,
+          "hasTests": true,
+          "hasCI": true,
+          "hasDocs": true,
+          "starsCount": 89,
+          "primaryLanguage": "TypeScript"
+        },
+        {
+          "id": "proj-1b",
+          "developerProfileId": "prof-1",
+          "name": "raft-consensus-kv",
+          "description": "Distributed Raft key-value storage engine implemented in Go with automated cluster failure testing.",
+          "repositoryUrl": "https://github.com/sarahchen-dev/raft-consensus-kv",
+          "technologies": [
+            "Go",
+            "Distributed Systems",
+            "Docker"
+          ],
+          "complexityScore": 92,
+          "hasTests": true,
+          "hasCI": true,
+          "hasDocs": true,
+          "starsCount": 215,
+          "primaryLanguage": "Go"
+        },
+        {
+          "id": "proj-1c",
+          "developerProfileId": "prof-1",
+          "name": "gateway-reverse-proxy",
+          "description": "Zero-allocation HTTP/2 & gRPC edge proxy with JWT validation and rate limiting.",
+          "repositoryUrl": "https://github.com/sarahchen-dev/gateway-reverse-proxy",
+          "technologies": [
+            "TypeScript",
+            "Node.js",
+            "Redis"
+          ],
+          "complexityScore": 84,
+          "hasTests": true,
+          "hasCI": true,
+          "hasDocs": true,
+          "starsCount": 67,
+          "primaryLanguage": "TypeScript"
+        },
+        {
+          "id": "proj-1d",
+          "developerProfileId": "prof-1",
+          "name": "k8s-pod-autoscaler",
+          "description": "Custom Kubernetes operator for event-driven autoscaling based on Kafka consumer lag.",
+          "repositoryUrl": "https://github.com/sarahchen-dev/k8s-pod-autoscaler",
+          "technologies": [
+            "Go",
+            "Kubernetes",
+            "Kafka"
+          ],
+          "complexityScore": 89,
+          "hasTests": true,
+          "hasCI": true,
+          "hasDocs": true,
+          "starsCount": 110,
+          "primaryLanguage": "Go"
+        }
+      ],
+      "evidences": [
+        {
+          "id": "ev-1",
+          "developerProfileId": "prof-1",
+          "claimType": "SKILL",
+          "claimValue": "Demonstrated production PostgreSQL database design and CDC streaming",
+          "sourceExcerpt": "streamline-db-cdc: High-performance Change Data Capture connector for PostgreSQL",
+          "repositoryRef": "github.com/sarahchen-dev/streamline-db-cdc",
+          "confidence": 0.95,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-09T23:01:08.713Z"
+        },
+        {
+          "id": "ev-2",
+          "developerProfileId": "prof-1",
+          "claimType": "ENGINEERING_PRACTICE",
+          "claimValue": "Automated CI/CD test workflow verified via GitHub Actions (.github/workflows/ci.yml)",
+          "sourceExcerpt": "GitHub Actions workflow executed 48 test suites on push",
+          "repositoryRef": "github.com/sarahchen-dev/streamline-db-cdc",
+          "confidence": 1,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-09T23:01:08.713Z"
+        }
+      ]
+    },
+    {
+      "id": "prof-3",
+      "ownerId": "demo-user-1",
+      "name": "Elena Rostova",
+      "headline": "Backend & Systems Engineer (Python / FastAPI / PostgreSQL)",
+      "summary": "5+ years backend engineering focused on data-intensive services, async Python, API reliability, and Dockerized deployments.",
+      "email": "elena.rostova@example.dev",
+      "location": "Seattle, WA",
+      "websiteUrl": "https://elenarostova.dev",
+      "githubUsername": "erostova",
+      "completeness": 80,
+      "createdAt": "2026-10-06T23:01:08.713Z",
+      "updatedAt": "2026-10-09T23:01:08.713Z",
+      "sources": [
+        {
+          "id": "src-4",
+          "developerProfileId": "prof-3",
+          "sourceType": "CV_DOCUMENT",
+          "status": "COMPLETED",
+          "fileName": "Elena_Rostova_Resume.pdf",
+          "fileSize": 145000,
+          "createdAt": "2026-10-06T23:01:08.713Z"
+        }
+      ],
+      "skills": [
+        {
+          "id": "sk-15",
+          "developerProfileId": "prof-3",
+          "canonicalName": "Python",
+          "category": "Languages",
+          "claimedProficiency": "Senior",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk-16",
+          "developerProfileId": "prof-3",
+          "canonicalName": "FastAPI",
+          "category": "Backend",
+          "claimedProficiency": "Senior",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk-17",
+          "developerProfileId": "prof-3",
+          "canonicalName": "PostgreSQL",
+          "category": "Databases",
+          "claimedProficiency": "Senior",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk-18",
+          "developerProfileId": "prof-3",
+          "canonicalName": "Docker",
+          "category": "Cloud & DevOps",
+          "claimedProficiency": "Senior",
+          "evidenceStatus": "VERIFIED"
+        },
+        {
+          "id": "sk-19",
+          "developerProfileId": "prof-3",
+          "canonicalName": "Redis",
+          "category": "Databases",
+          "claimedProficiency": "Mid",
+          "evidenceStatus": "CLAIMED"
+        }
+      ],
+      "experiences": [
+        {
+          "id": "exp-4",
+          "developerProfileId": "prof-3",
+          "employer": "DataForge Technologies",
+          "title": "Senior Backend Developer",
+          "description": "Engineered scalable data ingestion workers in Python and FastAPI. Optimized complex PostgreSQL queries and indexing, cutting P95 response times by 62%.",
+          "location": "Seattle, WA",
+          "startDate": "2021-04-01",
+          "isCurrent": true,
+          "technologies": [
+            "Python",
+            "FastAPI",
+            "PostgreSQL",
+            "Docker",
+            "Redis"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "id": "proj-4",
+          "developerProfileId": "prof-3",
+          "name": "async-task-router",
+          "description": "Resilient async queue dispatcher with backpressure support and PostgreSQL audit logs.",
+          "repositoryUrl": "https://github.com/erostova/async-task-router",
+          "technologies": [
+            "Python",
+            "FastAPI",
+            "PostgreSQL"
+          ],
+          "complexityScore": 84,
+          "hasTests": true,
+          "hasCI": true,
+          "hasDocs": true,
+          "starsCount": 95,
+          "primaryLanguage": "Python"
+        }
+      ],
+      "evidences": [
+        {
+          "id": "ev-4",
+          "developerProfileId": "prof-3",
+          "claimType": "SKILL",
+          "claimValue": "Demonstrated asynchronous Python & FastAPI architecture with PostgreSQL",
+          "sourceExcerpt": "async-task-router repository with PyTest unit tests and GitHub Actions CI",
+          "repositoryRef": "github.com/erostova/async-task-router",
+          "confidence": 0.95,
+          "verificationStatus": "SOURCE_OBSERVED",
+          "observedAt": "2026-10-09T23:01:08.713Z"
+        }
+      ]
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job-1",
+      "ownerId": "demo-user-1",
+      "title": "Senior Full-Stack Engineer (TypeScript & PostgreSQL)",
+      "company": "DevLens Platform Engineering",
+      "description": "We are seeking a seasoned Senior Full-Stack Engineer to architect, build, and scale our core evidence-based matching engine. You will work extensively across modern React frontends, TypeScript backend services, and robust PostgreSQL databases with strict automated testing practices.",
+      "requiredSkills": [
+        "TypeScript",
+        "React",
+        "PostgreSQL",
+        "Node.js"
+      ],
+      "preferredSkills": [
+        "Docker",
+        "Go",
+        "CI/CD"
+      ],
+      "requiredExperience": 4,
+      "domainRequirements": [
+        "SaaS Architecture",
+        "High Concurrency"
+      ],
+      "scoringWeights": {
+        "techSkills": 35,
+        "projectRelevance": 25,
+        "experienceAlignment": 20,
+        "engineeringPractices": 10,
+        "otherRequirements": 10
+      },
+      "isArchived": false,
+      "createdAt": "2026-10-05T23:01:08.713Z",
+      "updatedAt": "2026-10-08T23:01:08.713Z"
+    },
+    {
+      "id": "job-2",
+      "ownerId": "demo-user-1",
+      "title": "Backend Cloud Systems Engineer (Python / API)",
+      "company": "CloudCore Infrastructure",
+      "description": "Seeking a backend engineer specializing in Python, FastAPI, and PostgreSQL to design high-throughput distributed ingestion pipelines. Must have strong evidence of automated unit testing and containerization.",
+      "requiredSkills": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "preferredSkills": [
+        "Redis",
+        "Kubernetes"
+      ],
+      "requiredExperience": 3,
+      "domainRequirements": [
+        "Data Pipelines"
+      ],
+      "scoringWeights": {
+        "techSkills": 40,
+        "projectRelevance": 20,
+        "experienceAlignment": 20,
+        "engineeringPractices": 15,
+        "otherRequirements": 5
+      },
+      "isArchived": false,
+      "createdAt": "2026-10-07T23:01:08.713Z",
+      "updatedAt": "2026-10-09T23:01:08.713Z"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "cmp_1791592552152",
+      "ownerId": "demo-user-1",
+      "jobId": "job-2",
+      "title": "Job Match: Backend Cloud Systems Engineer (Python / API) (4 candidates)",
+      "comparisonType": "DEVELOPERS_VS_JOB",
+      "configuration": {
+        "weights": {
+          "techSkills": 40,
+          "projectRelevance": 20,
+          "experienceAlignment": 20,
+          "engineeringPractices": 15,
+          "otherRequirements": 5
+        }
+      },
+      "createdAt": "2026-10-10T00:35:52.152Z",
+      "results": [
+        {
+          "id": "res_1791592552152_prof-3",
+          "developerProfileId": "prof-3",
+          "developerName": "Elena Rostova",
+          "totalScore": 77,
+          "categoryScores": {
+            "techSkills": {
+              "score": 100,
+              "weight": 40,
+              "weightedScore": 40,
+              "evidenceFound": [
+                "Python (Direct match - Verified)",
+                "FastAPI (Direct match - Verified)",
+                "PostgreSQL (Direct match - Verified)",
+                "Docker (Direct match - Verified)",
+                "Preferred: Redis"
+              ],
+              "missingEvidence": [],
+              "notes": "4 of 4 required skills matched directly; 0 missing."
+            },
+            "projectRelevance": {
+              "score": 40,
+              "weight": 20,
+              "weightedScore": 8,
+              "evidenceFound": [
+                "Project \"async-task-router\" utilizes relevant stack: Python, FastAPI, PostgreSQL"
+              ],
+              "missingEvidence": [],
+              "notes": "1 projects analyzed with relevant technology stacks."
+            },
+            "experienceAlignment": {
+              "score": 70,
+              "weight": 20,
+              "weightedScore": 14,
+              "evidenceFound": [
+                "Senior Backend Developer at DataForge Technologies (Python, FastAPI, PostgreSQL)"
+              ],
+              "missingEvidence": [],
+              "notes": "1 positions documented; 1 relevant to engineering domain."
+            },
+            "engineeringPractices": {
+              "score": 100,
+              "weight": 15,
+              "weightedScore": 15,
+              "evidenceFound": [
+                "Automated test suites detected in 1 project(s) (async-task-router)",
+                "CI/CD pipeline workflows detected in 1 project(s)",
+                "Structured documentation and READMEs present in 1 project(s)"
+              ],
+              "missingEvidence": [],
+              "notes": "Observational evidence of testing and continuous integration detected."
+            },
+            "otherRequirements": {
+              "score": 0,
+              "weight": 5,
+              "weightedScore": 0,
+              "evidenceFound": [],
+              "missingEvidence": [
+                "Domain familiarity in Data Pipelines"
+              ],
+              "notes": "0 of 1 domain requirements verified."
+            }
+          },
+          "evidenceCoverage": 100,
+          "strengths": [
+            "Strong technical skill alignment (100/100) with key required technologies.",
+            "Demonstrated engineering discipline with automated testing and CI workflows."
+          ],
+          "gaps": [],
+          "explanation": "Overall match score of 77/100 is computed deterministically across 5 dimensions: Technical Skills (100/100 at 40%), Project Relevance (40/100 at 20%), Experience (70/100 at 20%), Engineering Practices (100/100 at 15%), and Other Requirements (0/100 at 5%). Evidence coverage is estimated at 100%.",
+          "ranking": 1
+        },
+        {
+          "id": "res_1791592552152_prof-1",
+          "developerProfileId": "prof-1",
+          "developerName": "Sarah Chen",
+          "totalScore": 75,
+          "categoryScores": {
+            "techSkills": {
+              "score": 58,
+              "weight": 40,
+              "weightedScore": 23.2,
+              "evidenceFound": [
+                "PostgreSQL (Direct match - Verified)",
+                "Docker (Direct match - Verified)",
+                "Preferred: Kubernetes"
+              ],
+              "missingEvidence": [
+                "Python",
+                "FastAPI"
+              ],
+              "notes": "2 of 4 required skills matched directly; 2 missing."
+            },
+            "projectRelevance": {
+              "score": 95,
+              "weight": 20,
+              "weightedScore": 19,
+              "evidenceFound": [
+                "Project \"streamline-db-cdc\" utilizes relevant stack: Go, PostgreSQL, Docker",
+                "Project \"raft-consensus-kv\" utilizes relevant stack: Go, Distributed Systems, Docker"
+              ],
+              "missingEvidence": [],
+              "notes": "5 projects analyzed with relevant technology stacks."
+            },
+            "experienceAlignment": {
+              "score": 90,
+              "weight": 20,
+              "weightedScore": 18,
+              "evidenceFound": [
+                "Staff Software Engineer at ScaleStream Data (Go, TypeScript, PostgreSQL)",
+                "Senior Backend Developer at Nexus Cloud Systems (Node.js, TypeScript, React)"
+              ],
+              "missingEvidence": [],
+              "notes": "2 positions documented; 2 relevant to engineering domain."
+            },
+            "engineeringPractices": {
+              "score": 100,
+              "weight": 15,
+              "weightedScore": 15,
+              "evidenceFound": [
+                "Automated test suites detected in 5 project(s) (streamline-db-cdc, react-flow-analytics, raft-consensus-kv, gateway-reverse-proxy, k8s-pod-autoscaler)",
+                "CI/CD pipeline workflows detected in 5 project(s)",
+                "Structured documentation and READMEs present in 5 project(s)"
+              ],
+              "missingEvidence": [],
+              "notes": "Observational evidence of testing and continuous integration detected."
+            },
+            "otherRequirements": {
+              "score": 0,
+              "weight": 5,
+              "weightedScore": 0,
+              "evidenceFound": [],
+              "missingEvidence": [
+                "Domain familiarity in Data Pipelines"
+              ],
+              "notes": "0 of 1 domain requirements verified."
+            }
+          },
+          "evidenceCoverage": 71,
+          "strengths": [
+            "Relevant project history showcasing practical application of target technologies.",
+            "Demonstrated engineering discipline with automated testing and CI workflows."
+          ],
+          "gaps": [
+            "Missing demonstrated skills for: Python, FastAPI."
+          ],
+          "explanation": "Overall match score of 75/100 is computed deterministically across 5 dimensions: Technical Skills (58/100 at 40%), Project Relevance (95/100 at 20%), Experience (90/100 at 20%), Engineering Practices (100/100 at 15%), and Other Requirements (0/100 at 5%). Evidence coverage is estimated at 71%.",
+          "ranking": 2
+        },
+        {
+          "id": "res_1791592552152_prof_1791592493419",
+          "developerProfileId": "prof_1791592493419",
+          "developerName": "Rasikh Ali",
+          "totalScore": 59,
+          "categoryScores": {
+            "techSkills": {
+              "score": 39,
+              "weight": 40,
+              "weightedScore": 15.6,
+              "evidenceFound": [
+                "Python (Direct match - Verified)",
+                "FastAPI (Related transferable: Python)"
+              ],
+              "missingEvidence": [
+                "PostgreSQL",
+                "Docker"
+              ],
+              "notes": "1 of 4 required skills matched directly; 2 missing."
+            },
+            "projectRelevance": {
+              "score": 100,
+              "weight": 20,
+              "weightedScore": 20,
+              "evidenceFound": [
+                "Project \"CinebyHub\" utilizes relevant stack: Python",
+                "Project \"InstantBoard\" utilizes relevant stack: Python",
+                "Project \"Agentic-AI-Course-Core-Repository\" utilizes relevant stack: Python",
+                "Project \"Superior---Automated-Folder-Files-Manager\" utilizes relevant stack: Python",
+                "Project \"Bulk-Git-Repo-Downloader\" utilizes relevant stack: Python",
+                "Project \"Ramadan-Tracker\" utilizes relevant stack: Python",
+                "Project \"AgentX-FinTech-AI-Wrapper\" utilizes relevant stack: Python",
+                "Project \"Property-Information-Extractor\" utilizes relevant stack: Python",
+                "Project \"SLM-Mini-Chatbot\" utilizes relevant stack: Python",
+                "Project \"Github_Repo_Listing\" utilizes relevant stack: Python",
+                "Project \"Github_Repo_Public_to_Private\" utilizes relevant stack: Python",
+                "Project \"Github_Repo_Private_to_Public\" utilizes relevant stack: Python",
+                "Project \"GitHub_Repo_Visibility_Management\" utilizes relevant stack: Python",
+                "Project \"Web-Monitor-and-Alert-System-using-Google-Email-App-Password\" utilizes relevant stack: Python",
+                "Project \"Leads-Extractor\" utilizes relevant stack: Python",
+                "Project \"StreamLitBot\" utilizes relevant stack: Python",
+                "Project \"fastapi-auth-app\" utilizes relevant stack: Python",
+                "Project \"setup_chromedriver\" utilizes relevant stack: Python"
+              ],
+              "missingEvidence": [],
+              "notes": "60 projects analyzed with relevant technology stacks."
+            },
+            "experienceAlignment": {
+              "score": 40,
+              "weight": 20,
+              "weightedScore": 8,
+              "evidenceFound": [],
+              "missingEvidence": [
+                "No work experience records documented."
+              ],
+              "notes": "0 positions documented; 0 relevant to engineering domain."
+            },
+            "engineeringPractices": {
+              "score": 100,
+              "weight": 15,
+              "weightedScore": 15,
+              "evidenceFound": [
+                "Automated test suites detected in 1 project(s) (Ramadan-Tracker)",
+                "CI/CD pipeline workflows detected in 3 project(s)",
+                "Structured documentation and READMEs present in 15 project(s)"
+              ],
+              "missingEvidence": [],
+              "notes": "Observational evidence of testing and continuous integration detected."
+            },
+            "otherRequirements": {
+              "score": 0,
+              "weight": 5,
+              "weightedScore": 0,
+              "evidenceFound": [],
+              "missingEvidence": [
+                "Domain familiarity in Data Pipelines"
+              ],
+              "notes": "0 of 1 domain requirements verified."
+            }
+          },
+          "evidenceCoverage": 67,
+          "strengths": [
+            "Relevant project history showcasing practical application of target technologies.",
+            "Demonstrated engineering discipline with automated testing and CI workflows."
+          ],
+          "gaps": [
+            "Missing demonstrated skills for: PostgreSQL, Docker."
+          ],
+          "explanation": "Overall match score of 59/100 is computed deterministically across 5 dimensions: Technical Skills (39/100 at 40%), Project Relevance (100/100 at 20%), Experience (40/100 at 20%), Engineering Practices (100/100 at 15%), and Other Requirements (0/100 at 5%). Evidence coverage is estimated at 67%.",
+          "ranking": 3
+        }
+      ]
+    },
+    {
+      "id": "cmp_1791592548438",
+      "ownerId": "demo-user-1",
+      "jobId": "job-1",
+      "title": "Job Match: Senior Full-Stack Engineer (TypeScript & PostgreSQL) (4 candidates)",
+      "comparisonType": "DEVELOPERS_VS_JOB",
+      "configuration": {
+        "weights": {
+          "techSkills": 35,
+          "projectRelevance": 25,
+          "experienceAlignment": 20,
+          "engineeringPractices": 10,
+          "otherRequirements": 10
+        }
+      },
+      "createdAt": "2026-10-10T00:35:48.438Z",
+      "results": [
+        {
+          "id": "res_1791592548438_prof-1",
+          "developerProfileId": "prof-1",
+          "developerName": "Sarah Chen",
+          "totalScore": 88,
+          "categoryScores": {
+            "techSkills": {
+              "score": 100,
+              "weight": 35,
+              "weightedScore": 35,
+              "evidenceFound": [
+                "TypeScript (Direct match - Verified)",
+                "React (Direct match - Verified)",
+                "PostgreSQL (Direct match - Verified)",
+                "Node.js (Direct match - Verified)",
+                "Preferred: Docker",
+                "Preferred: Go",
+                "Preferred: CI/CD"
+              ],
+              "missingEvidence": [],
+              "notes": "4 of 4 required skills matched directly; 0 missing."
+            },
+            "projectRelevance": {
+              "score": 100,
+              "weight": 25,
+              "weightedScore": 25,
+              "evidenceFound": [
+                "Project \"streamline-db-cdc\" utilizes relevant stack: Go, PostgreSQL, Docker",
+                "Project \"react-flow-analytics\" utilizes relevant stack: React, TypeScript, Tailwind CSS",
+                "Project \"gateway-reverse-proxy\" utilizes relevant stack: TypeScript, Node.js, Redis"
+              ],
+              "missingEvidence": [],
+              "notes": "5 projects analyzed with relevant technology stacks."
+            },
+            "experienceAlignment": {
+              "score": 90,
+              "weight": 20,
+              "weightedScore": 18,
+              "evidenceFound": [
+                "Staff Software Engineer at ScaleStream Data (Go, TypeScript, PostgreSQL)",
+                "Senior Backend Developer at Nexus Cloud Systems (Node.js, TypeScript, React)"
+              ],
+              "missingEvidence": [],
+              "notes": "2 positions documented; 2 relevant to engineering domain."
+            },
+            "engineeringPractices": {
+              "score": 100,
+              "weight": 10,
+              "weightedScore": 10,
+              "evidenceFound": [
+                "Automated test suites detected in 5 project(s) (streamline-db-cdc, react-flow-analytics, raft-consensus-kv, gateway-reverse-proxy, k8s-pod-autoscaler)",
+                "CI/CD pipeline workflows detected in 5 project(s)",
+                "Structured documentation and READMEs present in 5 project(s)"
+              ],
+              "missingEvidence": [],
+              "notes": "Observational evidence of testing and continuous integration detected."
+            },
+            "otherRequirements": {
+              "score": 0,
+              "weight": 10,
+              "weightedScore": 0,
+              "evidenceFound": [],
+              "missingEvidence": [
+                "Domain familiarity in SaaS Architecture",
+                "Domain familiarity in High Concurrency"
+              ],
+              "notes": "0 of 2 domain requirements verified."
+            }
+          },
+          "evidenceCoverage": 100,
+          "strengths": [
+            "Strong technical skill alignment (100/100) with key required technologies.",
+            "Relevant project history showcasing practical application of target technologies.",
+            "Demonstrated engineering discipline with automated testing and CI workflows."
+          ],
+          "gaps": [],
+          "explanation": "Overall match score of 88/100 is computed deterministically across 5 dimensions: Technical Skills (100/100 at 35%), Project Relevance (100/100 at 25%), Experience (90/100 at 20%), Engineering Practices (100/100 at 10%), and Other Requirements (0/100 at 10%). Evidence coverage is estimated at 100%.",
+          "ranking": 1
+        },
+        {
+          "id": "res_1791592548438_prof_1791592493419",
+          "developerProfileId": "prof_1791592493419",
+          "developerName": "Rasikh Ali",
+          "totalScore": 52,
+          "categoryScores": {
+            "techSkills": {
+              "score": 25,
+              "weight": 35,
+              "weightedScore": 8.8,
+              "evidenceFound": [
+                "TypeScript (Direct match - Verified)"
+              ],
+              "missingEvidence": [
+                "React",
+                "PostgreSQL",
+                "Node.js"
+              ],
+              "notes": "1 of 4 required skills matched directly; 3 missing."
+            },
+            "projectRelevance": {
+              "score": 100,
+              "weight": 25,
+              "weightedScore": 25,
+              "evidenceFound": [
+                "Project \"Falling-Notes\" utilizes relevant stack: TypeScript",
+                "Project \"RasikhAli.github.io\" utilizes relevant stack: TypeScript"
+              ],
+              "missingEvidence": [],
+              "notes": "60 projects analyzed with relevant technology stacks."
+            },
+            "experienceAlignment": {
+              "score": 40,
+              "weight": 20,
+              "weightedScore": 8,
+              "evidenceFound": [],
+              "missingEvidence": [
+                "No work experience records documented."
+              ],
+              "notes": "0 positions documented; 0 relevant to engineering domain."
+            },
+            "engineeringPractices": {
+              "score": 100,
+              "weight": 10,
+              "weightedScore": 10,
+              "evidenceFound": [
+                "Automated test suites detected in 1 project(s) (Ramadan-Tracker)",
+                "CI/CD pipeline workflows detected in 3 project(s)",
+                "Structured documentation and READMEs present in 15 project(s)"
+              ],
+              "missingEvidence": [],
+              "notes": "Observational evidence of testing and continuous integration detected."
+            },
+            "otherRequirements": {
+              "score": 0,
+              "weight": 10,
+              "weightedScore": 0,
+              "evidenceFound": [],
+              "missingEvidence": [
+                "Domain familiarity in SaaS Architecture",
+                "Domain familiarity in High Concurrency"
+              ],
+              "notes": "0 of 2 domain requirements verified."
+            }
+          },
+          "evidenceCoverage": 50,
+          "strengths": [
+            "Relevant project history showcasing practical application of target technologies.",
+            "Demonstrated engineering discipline with automated testing and CI workflows."
+          ],
+          "gaps": [
+            "Missing demonstrated skills for: React, PostgreSQL, Node.js."
+          ],
+          "explanation": "Overall match score of 52/100 is computed deterministically across 5 dimensions: Technical Skills (25/100 at 35%), Project Relevance (100/100 at 25%), Experience (40/100 at 20%), Engineering Practices (100/100 at 10%), and Other Requirements (0/100 at 10%). Evidence coverage is estimated at 50%.",
+          "ranking": 3
+        },
+        {
+          "id": "res_1791592548438_prof-3",
+          "developerProfileId": "prof-3",
+          "developerName": "Elena Rostova",
+          "totalScore": 45,
+          "categoryScores": {
+            "techSkills": {
+              "score": 30,
+              "weight": 35,
+              "weightedScore": 10.5,
+              "evidenceFound": [
+                "PostgreSQL (Direct match - Verified)",
+                "Preferred: Docker"
+              ],
+              "missingEvidence": [
+                "TypeScript",
+                "React",
+                "Node.js"
+              ],
+              "notes": "1 of 4 required skills matched directly; 3 missing."
+            },
+            "projectRelevance": {
+              "score": 40,
+              "weight": 25,
+              "weightedScore": 10,
+              "evidenceFound": [
+                "Project \"async-task-router\" utilizes relevant stack: Python, FastAPI, PostgreSQL"
+              ],
+              "missingEvidence": [],
+              "notes": "1 projects analyzed with relevant technology stacks."
+            },
+            "experienceAlignment": {
+              "score": 70,
+              "weight": 20,
+              "weightedScore": 14,
+              "evidenceFound": [
+                "Senior Backend Developer at DataForge Technologies (Python, FastAPI, PostgreSQL)"
+              ],
+              "missingEvidence": [],
+              "notes": "1 positions documented; 1 relevant to engineering domain."
+            },
+            "engineeringPractices": {
+              "score": 100,
+              "weight": 10,
+              "weightedScore": 10,
+              "evidenceFound": [
+                "Automated test suites detected in 1 project(s) (async-task-router)",
+                "CI/CD pipeline workflows detected in 1 project(s)",
+                "Structured documentation and READMEs present in 1 project(s)"
+              ],
+              "missingEvidence": [],
+              "notes": "Observational evidence of testing and continuous integration detected."
+            },
+            "otherRequirements": {
+              "score": 0,
+              "weight": 10,
+              "weightedScore": 0,
+              "evidenceFound": [],
+              "missingEvidence": [
+                "Domain familiarity in SaaS Architecture",
+                "Domain familiarity in High Concurrency"
+              ],
+              "notes": "0 of 2 domain requirements verified."
+            }
+          },
+          "evidenceCoverage": 57,
+          "strengths": [
+            "Demonstrated engineering discipline with automated testing and CI workflows."
+          ],
+          "gaps": [
+            "Missing demonstrated skills for: TypeScript, React, Node.js."
+          ],
+          "explanation": "Overall match score of 45/100 is computed deterministically across 5 dimensions: Technical Skills (30/100 at 35%), Project Relevance (40/100 at 25%), Experience (70/100 at 20%), Engineering Practices (100/100 at 10%), and Other Requirements (0/100 at 10%). Evidence coverage is estimated at 57%.",
+          "ranking": 4
+        }
+      ]
+    },
+    {
+      "id": "cmp_1791592536998",
+      "ownerId": "demo-user-1",
+      "title": "Comparison: Rasikh Ali vs Sarah Chen",
+      "comparisonType": "DEVELOPER_VS_DEVELOPER",
+      "createdAt": "2026-10-10T00:35:36.998Z",
+      "results": []
+    },
+    {
+      "id": "cmp_1791592534944",
+      "ownerId": "demo-user-1",
+      "title": "Comparison: Rasikh Ali vs Sarah Chen",
+      "comparisonType": "DEVELOPER_VS_DEVELOPER",
+      "createdAt": "2026-10-10T00:35:34.944Z",
+      "results": []
+    },
+    {
+      "id": "cmp_1791590267628",
+      "ownerId": "demo-user-1",
+      "title": "Comparison: Sarah Chen vs Marcus Vance",
+      "comparisonType": "DEVELOPER_VS_DEVELOPER",
+      "createdAt": "2026-10-09T23:57:47.629Z",
+      "results": []
+    },
+    {
+      "id": "cmp_1791590262251",
+      "ownerId": "demo-user-1",
+      "jobId": "job-1",
+      "title": "Job Match: Senior Full-Stack Engineer (TypeScript & PostgreSQL) (3 candidates)",
+      "comparisonType": "DEVELOPERS_VS_JOB",
+      "configuration": {
+        "weights": {
+          "techSkills": 35,
+          "projectRelevance": 25,
+          "experienceAlignment": 20,
+          "engineeringPractices": 10,
+          "otherRequirements": 10
+        }
+      },
+      "createdAt": "2026-10-09T23:57:42.251Z",
+      "results": [
+        {
+          "id": "res_1791590262251_prof-1",
+          "developerProfileId": "prof-1",
+          "developerName": "Sarah Chen",
+          "totalScore": 88,
+          "categoryScores": {
+            "techSkills": {
+              "score": 100,
+              "weight": 35,
+              "weightedScore": 35,
+              "evidenceFound": [
+                "TypeScript (Direct match - Verified)",
+                "React (Direct match - Verified)",
+                "PostgreSQL (Direct match - Verified)",
+                "Node.js (Direct match - Verified)",
+                "Preferred: Docker",
+                "Preferred: Go",
+                "Preferred: CI/CD"
+              ],
+              "missingEvidence": [],
+              "notes": "4 of 4 required skills matched directly; 0 missing."
+            },
+            "projectRelevance": {
+              "score": 100,
+              "weight": 25,
+              "weightedScore": 25,
+              "evidenceFound": [
+                "Project \"streamline-db-cdc\" utilizes relevant stack: Go, PostgreSQL, Docker",
+                "Project \"react-flow-analytics\" utilizes relevant stack: React, TypeScript, Tailwind CSS",
+                "Project \"gateway-reverse-proxy\" utilizes relevant stack: TypeScript, Node.js, Redis"
+              ],
+              "missingEvidence": [],
+              "notes": "5 projects analyzed with relevant technology stacks."
+            },
+            "experienceAlignment": {
+              "score": 90,
+              "weight": 20,
+              "weightedScore": 18,
+              "evidenceFound": [
+                "Staff Software Engineer at ScaleStream Data (Go, TypeScript, PostgreSQL)",
+                "Senior Backend Developer at Nexus Cloud Systems (Node.js, TypeScript, React)"
+              ],
+              "missingEvidence": [],
+              "notes": "2 positions documented; 2 relevant to engineering domain."
+            },
+            "engineeringPractices": {
+              "score": 100,
+              "weight": 10,
+              "weightedScore": 10,
+              "evidenceFound": [
+                "Automated test suites detected in 5 project(s) (streamline-db-cdc, react-flow-analytics, raft-consensus-kv, gateway-reverse-proxy, k8s-pod-autoscaler)",
+                "CI/CD pipeline workflows detected in 5 project(s)",
+                "Structured documentation and READMEs present in 5 project(s)"
+              ],
+              "missingEvidence": [],
+              "notes": "Observational evidence of testing and continuous integration detected."
+            },
+            "otherRequirements": {
+              "score": 0,
+              "weight": 10,
+              "weightedScore": 0,
+              "evidenceFound": [],
+              "missingEvidence": [
+                "Domain familiarity in SaaS Architecture",
+                "Domain familiarity in High Concurrency"
+              ],
+              "notes": "0 of 2 domain requirements verified."
+            }
+          },
+          "evidenceCoverage": 100,
+          "strengths": [
+            "Strong technical skill alignment (100/100) with key required technologies.",
+            "Relevant project history showcasing practical application of target technologies.",
+            "Demonstrated engineering discipline with automated testing and CI workflows."
+          ],
+          "gaps": [],
+          "explanation": "Overall match score of 88/100 is computed deterministically across 5 dimensions: Technical Skills (100/100 at 35%), Project Relevance (100/100 at 25%), Experience (90/100 at 20%), Engineering Practices (100/100 at 10%), and Other Requirements (0/100 at 10%). Evidence coverage is estimated at 100%.",
+          "ranking": 1
+        },
+        {
+          "id": "res_1791590262251_prof-3",
+          "developerProfileId": "prof-3",
+          "developerName": "Elena Rostova",
+          "totalScore": 45,
+          "categoryScores": {
+            "techSkills": {
+              "score": 30,
+              "weight": 35,
+              "weightedScore": 10.5,
+              "evidenceFound": [
+                "PostgreSQL (Direct match - Verified)",
+                "Preferred: Docker"
+              ],
+              "missingEvidence": [
+                "TypeScript",
+                "React",
+                "Node.js"
+              ],
+              "notes": "1 of 4 required skills matched directly; 3 missing."
+            },
+            "projectRelevance": {
+              "score": 40,
+              "weight": 25,
+              "weightedScore": 10,
+              "evidenceFound": [
+                "Project \"async-task-router\" utilizes relevant stack: Python, FastAPI, PostgreSQL"
+              ],
+              "missingEvidence": [],
+              "notes": "1 projects analyzed with relevant technology stacks."
+            },
+            "experienceAlignment": {
+              "score": 70,
+              "weight": 20,
+              "weightedScore": 14,
+              "evidenceFound": [
+                "Senior Backend Developer at DataForge Technologies (Python, FastAPI, PostgreSQL)"
+              ],
+              "missingEvidence": [],
+              "notes": "1 positions documented; 1 relevant to engineering domain."
+            },
+            "engineeringPractices": {
+              "score": 100,
+              "weight": 10,
+              "weightedScore": 10,
+              "evidenceFound": [
+                "Automated test suites detected in 1 project(s) (async-task-router)",
+                "CI/CD pipeline workflows detected in 1 project(s)",
+                "Structured documentation and READMEs present in 1 project(s)"
+              ],
+              "missingEvidence": [],
+              "notes": "Observational evidence of testing and continuous integration detected."
+            },
+            "otherRequirements": {
+              "score": 0,
+              "weight": 10,
+              "weightedScore": 0,
+              "evidenceFound": [],
+              "missingEvidence": [
+                "Domain familiarity in SaaS Architecture",
+                "Domain familiarity in High Concurrency"
+              ],
+              "notes": "0 of 2 domain requirements verified."
+            }
+          },
+          "evidenceCoverage": 57,
+          "strengths": [
+            "Demonstrated engineering discipline with automated testing and CI workflows."
+          ],
+          "gaps": [
+            "Missing demonstrated skills for: TypeScript, React, Node.js."
+          ],
+          "explanation": "Overall match score of 45/100 is computed deterministically across 5 dimensions: Technical Skills (30/100 at 35%), Project Relevance (40/100 at 25%), Experience (70/100 at 20%), Engineering Practices (100/100 at 10%), and Other Requirements (0/100 at 10%). Evidence coverage is estimated at 57%.",
+          "ranking": 3
+        }
+      ]
+    },
+    {
+      "id": "cmp_1791590257388",
+      "ownerId": "demo-user-1",
+      "title": "Comparison: Sarah Chen vs Marcus Vance",
+      "comparisonType": "DEVELOPER_VS_DEVELOPER",
+      "createdAt": "2026-10-09T23:57:37.388Z",
+      "results": []
+    },
+    {
+      "id": "cmp_1791587767254",
+      "ownerId": "demo-user-1",
+      "jobId": "job-1",
+      "title": "Job Match: Senior Full-Stack Engineer (TypeScript & PostgreSQL) (3 candidates)",
+      "comparisonType": "DEVELOPERS_VS_JOB",
+      "configuration": {
+        "weights": {
+          "techSkills": 35,
+          "projectRelevance": 25,
+          "experienceAlignment": 20,
+          "engineeringPractices": 10,
+          "otherRequirements": 10
+        }
+      },
+      "createdAt": "2026-10-09T23:16:07.254Z",
+      "results": [
+        {
+          "id": "res_1791587767254_prof-1",
+          "developerProfileId": "prof-1",
+          "developerName": "Sarah Chen",
+          "totalScore": 88,
+          "categoryScores": {
+            "techSkills": {
+              "score": 100,
+              "weight": 35,
+              "weightedScore": 35,
+              "evidenceFound": [
+                "TypeScript (Direct match - Verified)",
+                "React (Direct match - Verified)",
+                "PostgreSQL (Direct match - Verified)",
+                "Node.js (Direct match - Verified)",
+                "Preferred: Docker",
+                "Preferred: Go",
+                "Preferred: CI/CD"
+              ],
+              "missingEvidence": [],
+              "notes": "4 of 4 required skills matched directly; 0 missing."
+            },
+            "projectRelevance": {
+              "score": 100,
+              "weight": 25,
+              "weightedScore": 25,
+              "evidenceFound": [
+                "Project \"streamline-db-cdc\" utilizes relevant stack: Go, PostgreSQL, Docker",
+                "Project \"react-flow-analytics\" utilizes relevant stack: React, TypeScript, Tailwind CSS",
+                "Project \"gateway-reverse-proxy\" utilizes relevant stack: TypeScript, Node.js, Redis"
+              ],
+              "missingEvidence": [],
+              "notes": "5 projects analyzed with relevant technology stacks."
+            },
+            "experienceAlignment": {
+              "score": 90,
+              "weight": 20,
+              "weightedScore": 18,
+              "evidenceFound": [
+                "Staff Software Engineer at ScaleStream Data (Go, TypeScript, PostgreSQL)",
+                "Senior Backend Developer at Nexus Cloud Systems (Node.js, TypeScript, React)"
+              ],
+              "missingEvidence": [],
+              "notes": "2 positions documented; 2 relevant to engineering domain."
+            },
+            "engineeringPractices": {
+              "score": 100,
+              "weight": 10,
+              "weightedScore": 10,
+              "evidenceFound": [
+                "Automated test suites detected in 5 project(s) (streamline-db-cdc, react-flow-analytics, raft-consensus-kv, gateway-reverse-proxy, k8s-pod-autoscaler)",
+                "CI/CD pipeline workflows detected in 5 project(s)",
+                "Structured documentation and READMEs present in 5 project(s)"
+              ],
+              "missingEvidence": [],
+              "notes": "Observational evidence of testing and continuous integration detected."
+            },
+            "otherRequirements": {
+              "score": 0,
+              "weight": 10,
+              "weightedScore": 0,
+              "evidenceFound": [],
+              "missingEvidence": [
+                "Domain familiarity in SaaS Architecture",
+                "Domain familiarity in High Concurrency"
+              ],
+              "notes": "0 of 2 domain requirements verified."
+            }
+          },
+          "evidenceCoverage": 100,
+          "strengths": [
+            "Strong technical skill alignment (100/100) with key required technologies.",
+            "Relevant project history showcasing practical application of target technologies.",
+            "Demonstrated engineering discipline with automated testing and CI workflows."
+          ],
+          "gaps": [],
+          "explanation": "Overall match score of 88/100 is computed deterministically across 5 dimensions: Technical Skills (100/100 at 35%), Project Relevance (100/100 at 25%), Experience (90/100 at 20%), Engineering Practices (100/100 at 10%), and Other Requirements (0/100 at 10%). Evidence coverage is estimated at 100%.",
+          "ranking": 1
+        },
+        {
+          "id": "res_1791587767255_prof-3",
+          "developerProfileId": "prof-3",
+          "developerName": "Elena Rostova",
+          "totalScore": 45,
+          "categoryScores": {
+            "techSkills": {
+              "score": 30,
+              "weight": 35,
+              "weightedScore": 10.5,
+              "evidenceFound": [
+                "PostgreSQL (Direct match - Verified)",
+                "Preferred: Docker"
+              ],
+              "missingEvidence": [
+                "TypeScript",
+                "React",
+                "Node.js"
+              ],
+              "notes": "1 of 4 required skills matched directly; 3 missing."
+            },
+            "projectRelevance": {
+              "score": 40,
+              "weight": 25,
+              "weightedScore": 10,
+              "evidenceFound": [
+                "Project \"async-task-router\" utilizes relevant stack: Python, FastAPI, PostgreSQL"
+              ],
+              "missingEvidence": [],
+              "notes": "1 projects analyzed with relevant technology stacks."
+            },
+            "experienceAlignment": {
+              "score": 70,
+              "weight": 20,
+              "weightedScore": 14,
+              "evidenceFound": [
+                "Senior Backend Developer at DataForge Technologies (Python, FastAPI, PostgreSQL)"
+              ],
+              "missingEvidence": [],
+              "notes": "1 positions documented; 1 relevant to engineering domain."
+            },
+            "engineeringPractices": {
+              "score": 100,
+              "weight": 10,
+              "weightedScore": 10,
+              "evidenceFound": [
+                "Automated test suites detected in 1 project(s) (async-task-router)",
+                "CI/CD pipeline workflows detected in 1 project(s)",
+                "Structured documentation and READMEs present in 1 project(s)"
+              ],
+              "missingEvidence": [],
+              "notes": "Observational evidence of testing and continuous integration detected."
+            },
+            "otherRequirements": {
+              "score": 0,
+              "weight": 10,
+              "weightedScore": 0,
+              "evidenceFound": [],
+              "missingEvidence": [
+                "Domain familiarity in SaaS Architecture",
+                "Domain familiarity in High Concurrency"
+              ],
+              "notes": "0 of 2 domain requirements verified."
+            }
+          },
+          "evidenceCoverage": 57,
+          "strengths": [
+            "Demonstrated engineering discipline with automated testing and CI workflows."
+          ],
+          "gaps": [
+            "Missing demonstrated skills for: TypeScript, React, Node.js."
+          ],
+          "explanation": "Overall match score of 45/100 is computed deterministically across 5 dimensions: Technical Skills (30/100 at 35%), Project Relevance (40/100 at 25%), Experience (70/100 at 20%), Engineering Practices (100/100 at 10%), and Other Requirements (0/100 at 10%). Evidence coverage is estimated at 57%.",
+          "ranking": 3
+        }
+      ]
+    },
+    {
+      "id": "cmp_1791586951726",
+      "ownerId": "demo-user-1",
+      "jobId": "job-1",
+      "title": "Job Match: Senior Full-Stack Engineer (TypeScript & PostgreSQL) (3 candidates)",
+      "comparisonType": "DEVELOPERS_VS_JOB",
+      "configuration": {
+        "weights": {
+          "techSkills": 35,
+          "projectRelevance": 25,
+          "experienceAlignment": 20,
+          "engineeringPractices": 10,
+          "otherRequirements": 10
+        }
+      },
+      "createdAt": "2026-10-09T23:02:31.726Z",
+      "results": [
+        {
+          "id": "res_1791586951726_prof-1",
+          "developerProfileId": "prof-1",
+          "developerName": "Sarah Chen",
+          "totalScore": 88,
+          "categoryScores": {
+            "techSkills": {
+              "score": 100,
+              "weight": 35,
+              "weightedScore": 35,
+              "evidenceFound": [
+                "TypeScript (Direct match - Verified)",
+                "React (Direct match - Verified)",
+                "PostgreSQL (Direct match - Verified)",
+                "Node.js (Direct match - Verified)",
+                "Preferred: Docker",
+                "Preferred: Go",
+                "Preferred: CI/CD"
+              ],
+              "missingEvidence": [],
+              "notes": "4 of 4 required skills matched directly; 0 missing."
+            },
+            "projectRelevance": {
+              "score": 100,
+              "weight": 25,
+              "weightedScore": 25,
+              "evidenceFound": [
+                "Project \"streamline-db-cdc\" utilizes relevant stack: Go, PostgreSQL, Docker",
+                "Project \"react-flow-analytics\" utilizes relevant stack: React, TypeScript, Tailwind CSS",
+                "Project \"gateway-reverse-proxy\" utilizes relevant stack: TypeScript, Node.js, Redis"
+              ],
+              "missingEvidence": [],
+              "notes": "5 projects analyzed with relevant technology stacks."
+            },
+            "experienceAlignment": {
+              "score": 90,
+              "weight": 20,
+              "weightedScore": 18,
+              "evidenceFound": [
+                "Staff Software Engineer at ScaleStream Data (Go, TypeScript, PostgreSQL)",
+                "Senior Backend Developer at Nexus Cloud Systems (Node.js, TypeScript, React)"
+              ],
+              "missingEvidence": [],
+              "notes": "2 positions documented; 2 relevant to engineering domain."
+            },
+            "engineeringPractices": {
+              "score": 100,
+              "weight": 10,
+              "weightedScore": 10,
+              "evidenceFound": [
+                "Automated test suites detected in 5 project(s) (streamline-db-cdc, react-flow-analytics, raft-consensus-kv, gateway-reverse-proxy, k8s-pod-autoscaler)",
+                "CI/CD pipeline workflows detected in 5 project(s)",
+                "Structured documentation and READMEs present in 5 project(s)"
+              ],
+              "missingEvidence": [],
+              "notes": "Observational evidence of testing and continuous integration detected."
+            },
+            "otherRequirements": {
+              "score": 0,
+              "weight": 10,
+              "weightedScore": 0,
+              "evidenceFound": [],
+              "missingEvidence": [
+                "Domain familiarity in SaaS Architecture",
+                "Domain familiarity in High Concurrency"
+              ],
+              "notes": "0 of 2 domain requirements verified."
+            }
+          },
+          "evidenceCoverage": 100,
+          "strengths": [
+            "Strong technical skill alignment (100/100) with key required technologies.",
+            "Relevant project history showcasing practical application of target technologies.",
+            "Demonstrated engineering discipline with automated testing and CI workflows."
+          ],
+          "gaps": [],
+          "explanation": "Overall match score of 88/100 is computed deterministically across 5 dimensions: Technical Skills (100/100 at 35%), Project Relevance (100/100 at 25%), Experience (90/100 at 20%), Engineering Practices (100/100 at 10%), and Other Requirements (0/100 at 10%). Evidence coverage is estimated at 100%.",
+          "ranking": 1
+        },
+        {
+          "id": "res_1791586951726_prof-3",
+          "developerProfileId": "prof-3",
+          "developerName": "Elena Rostova",
+          "totalScore": 45,
+          "categoryScores": {
+            "techSkills": {
+              "score": 30,
+              "weight": 35,
+              "weightedScore": 10.5,
+              "evidenceFound": [
+                "PostgreSQL (Direct match - Verified)",
+                "Preferred: Docker"
+              ],
+              "missingEvidence": [
+                "TypeScript",
+                "React",
+                "Node.js"
+              ],
+              "notes": "1 of 4 required skills matched directly; 3 missing."
+            },
+            "projectRelevance": {
+              "score": 40,
+              "weight": 25,
+              "weightedScore": 10,
+              "evidenceFound": [
+                "Project \"async-task-router\" utilizes relevant stack: Python, FastAPI, PostgreSQL"
+              ],
+              "missingEvidence": [],
+              "notes": "1 projects analyzed with relevant technology stacks."
+            },
+            "experienceAlignment": {
+              "score": 70,
+              "weight": 20,
+              "weightedScore": 14,
+              "evidenceFound": [
+                "Senior Backend Developer at DataForge Technologies (Python, FastAPI, PostgreSQL)"
+              ],
+              "missingEvidence": [],
+              "notes": "1 positions documented; 1 relevant to engineering domain."
+            },
+            "engineeringPractices": {
+              "score": 100,
+              "weight": 10,
+              "weightedScore": 10,
+              "evidenceFound": [
+                "Automated test suites detected in 1 project(s) (async-task-router)",
+                "CI/CD pipeline workflows detected in 1 project(s)",
+                "Structured documentation and READMEs present in 1 project(s)"
+              ],
+              "missingEvidence": [],
+              "notes": "Observational evidence of testing and continuous integration detected."
+            },
+            "otherRequirements": {
+              "score": 0,
+              "weight": 10,
+              "weightedScore": 0,
+              "evidenceFound": [],
+              "missingEvidence": [
+                "Domain familiarity in SaaS Architecture",
+                "Domain familiarity in High Concurrency"
+              ],
+              "notes": "0 of 2 domain requirements verified."
+            }
+          },
+          "evidenceCoverage": 57,
+          "strengths": [
+            "Demonstrated engineering discipline with automated testing and CI workflows."
+          ],
+          "gaps": [
+            "Missing demonstrated skills for: TypeScript, React, Node.js."
+          ],
+          "explanation": "Overall match score of 45/100 is computed deterministically across 5 dimensions: Technical Skills (30/100 at 35%), Project Relevance (40/100 at 25%), Experience (70/100 at 20%), Engineering Practices (100/100 at 10%), and Other Requirements (0/100 at 10%). Evidence coverage is estimated at 57%.",
+          "ranking": 3
+        }
+      ]
+    }
+  ]
+}
