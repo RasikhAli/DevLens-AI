@@ -31,9 +31,9 @@ export interface HexagonalVaultProps {
   children?: React.ReactNode;
 }
 
-// Color presets tailored for website theme:
-// Lightmode: graphite & deep slate (#64748B, #0F172A)
-// Darkmode: mono luminous silver & obsidian white (#8A8A99, #FFFFFF)
+// Tailored color presets:
+// Lightmode: graphite (#64748B, #0F172A)
+// Darkmode: mono (#8A8A99, #FFFFFF)
 const PRESET_GRAPHITE: [string, string] = ["#64748B", "#0F172A"];
 const PRESET_MONO: [string, string] = ["#8A8A99", "#FFFFFF"];
 
@@ -94,7 +94,7 @@ export function HexagonalVault({
     return () => observer.disconnect();
   }, [themeMode]);
 
-  // Determine active colors: graphite for lightmode, mono for darkmode
+  // Active colors: graphite for lightmode, mono for darkmode
   const activeColors: [string, string] = isDark
     ? (colors && colors.length >= 2 ? [colors[0], colors[1]] : PRESET_MONO)
     : (colors && colors.length >= 2 && colors !== PRESET_MONO ? [colors[0], colors[1]] : PRESET_GRAPHITE);
@@ -124,17 +124,18 @@ export function HexagonalVault({
     const horizSpacing = hexWidth;
 
     // In ReactBits Hexagonal Vault, lattice controls the wall gap margin
-    // lattice=0.10 means 10% wall margin (0.90x cell radius), creating crisp geometric borders
     const hexR = baseR * (lattice <= 0.5 ? Math.max(0.65, 1 - lattice * 0.4) : lattice);
 
     // Precalculate hexagon point offsets for fast drawing
     const hexOffsets: [number, number][] = [];
+    const hexAngles: number[] = [];
     for (let i = 0; i < 6; i++) {
       const angle = (Math.PI / 180) * (60 * i - 30);
+      hexAngles.push(angle);
       hexOffsets.push([hexR * Math.cos(angle), hexR * Math.sin(angle)]);
     }
 
-    // Fast helper to trace hexagon
+    // Helper to trace a single hexagon
     const traceHex = (context: CanvasRenderingContext2D, cx: number, cy: number) => {
       context.moveTo(cx + hexOffsets[0][0], cy + hexOffsets[0][1]);
       for (let i = 1; i < 6; i++) {
@@ -166,7 +167,7 @@ export function HexagonalVault({
         }
       }
 
-      offscreenCtx.lineWidth = Math.max(0.65, lineWidth);
+      offscreenCtx.lineWidth = Math.max(0.4, lineWidth);
       offscreenCtx.strokeStyle = isDark
         ? "rgba(138, 138, 153, 0.12)"
         : "rgba(100, 116, 139, 0.16)";
@@ -182,7 +183,7 @@ export function HexagonalVault({
       isHovered: false,
     };
 
-    // Fast trail buffer
+    // Trail buffer
     interface TrailPoint {
       x: number;
       y: number;
@@ -190,14 +191,15 @@ export function HexagonalVault({
     }
     const trail: TrailPoint[] = [];
     const maxTrailDuration = Math.max(300, trailLength * 700);
-    const maxTrailPoints = 16;
+    const maxTrailPoints = 18;
 
-    // Click Pulses buffer (shockwave ripple on pointer click)
+    // Click Pulses buffer (shockwave ripples that spread outward across the entire screen)
     interface ClickPulse {
       x: number;
       y: number;
       birth: number;
       maxRadius: number;
+      waveThickness: number;
     }
     const pulseQueue: ClickPulse[] = [];
 
@@ -227,7 +229,6 @@ export function HexagonalVault({
     resizeObserver.observe(container);
     updateDimensions();
 
-    // IntersectionObserver to pause rendering when scrolled out of view
     const intersectionObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -238,7 +239,7 @@ export function HexagonalVault({
     );
     intersectionObserver.observe(container);
 
-    // Highly responsive pointer tracking
+    // Responsive pointer tracking
     const onPointerMove = (e: MouseEvent) => {
       if (!interactive) return;
       const rect = container.getBoundingClientRect();
@@ -261,22 +262,38 @@ export function HexagonalVault({
       }
     };
 
-    // Click Pulses listener
-    const onPointerDown = (e: MouseEvent) => {
+    // Click Pulses trigger: fires on click and creates shockwave expanding across the full lattice
+    let lastPulseTime = 0;
+    const triggerPulseAt = (clientX: number, clientY: number) => {
       if (!interactive || !clickPulses) return;
       const rect = container.getBoundingClientRect();
-      const inX = e.clientX >= rect.left && e.clientX <= rect.right;
-      const inY = e.clientY >= rect.top && e.clientY <= rect.bottom;
+      const inX = clientX >= rect.left && clientX <= rect.right;
+      const inY = clientY >= rect.top && clientY <= rect.bottom;
       if (inX && inY) {
-        const cx = e.clientX - rect.left;
-        const cy = e.clientY - rect.top;
+        const now = performance.now();
+        // Prevent micro-duplicate events from bubbling
+        if (now - lastPulseTime < 40) return;
+        lastPulseTime = now;
+
+        const cx = clientX - rect.left;
+        const cy = clientY - rect.top;
+        const maxDist = Math.hypot(
+          Math.max(cx, width - cx),
+          Math.max(cy, height - cy)
+        ) * 1.35;
+
         pulseQueue.push({
           x: cx,
           y: cy,
-          birth: performance.now(),
-          maxRadius: Math.max(width, height) * 0.8,
+          birth: now,
+          maxRadius: Math.max(500, maxDist),
+          waveThickness: baseR * 2.5,
         });
       }
+    };
+
+    const onPointerDown = (e: MouseEvent) => {
+      triggerPulseAt(e.clientX, e.clientY);
     };
 
     window.addEventListener("pointermove", onPointerMove, { passive: true });
@@ -285,7 +302,7 @@ export function HexagonalVault({
     let startTime = performance.now();
     let lastTrailTime = 0;
 
-    // Buttery-smooth 60 FPS Render Loop
+    // 60+ FPS Cinematic Render Loop
     const render = (now: number) => {
       animationFrameId = requestAnimationFrame(render);
       if (!isVisible || width === 0 || height === 0 || paused) return;
@@ -315,8 +332,8 @@ export function HexagonalVault({
         }
       } else if (autoplay) {
         // Idle ambient float around center when pointer is not over canvas
-        const idleX = width / 2 + Math.cos(elapsed * 0.9 + seed) * (width * 0.22);
-        const idleY = height / 2 + Math.sin(elapsed * 0.7 + seed) * (height * 0.18);
+        const idleX = width / 2 + Math.cos(elapsed * 0.9 + seed) * (width * 0.24);
+        const idleY = height / 2 + Math.sin(elapsed * 0.7 + seed) * (height * 0.2);
         mouse.x += (idleX - mouse.x) * (followRate * 0.45);
         mouse.y += (idleY - mouse.y) * (followRate * 0.45);
       }
@@ -326,12 +343,14 @@ export function HexagonalVault({
         trail.shift();
       }
 
-      // Update and purge click pulses
-      const pulseSpeedMultiplier = 0.5 * speed;
+      // Calculate pulse expansion velocity based on pulseSpeed and speed props
+      const pulseVelocity = 480 * Math.max(0.35, pulseSpeed) * Math.max(0.7, speed * 0.75);
+
+      // Update and purge completed click pulses
       for (let pIdx = pulseQueue.length - 1; pIdx >= 0; pIdx--) {
         const p = pulseQueue[pIdx];
         const age = (now - p.birth) * 0.001;
-        const currentR = age * 400 * pulseSpeedMultiplier;
+        const currentR = age * pulseVelocity;
         if (currentR > p.maxRadius) {
           pulseQueue.splice(pIdx, 1);
         }
@@ -377,9 +396,47 @@ export function HexagonalVault({
         ctx.fill();
       }
 
-      // 3. Spatially bounded highlight loop: check cells within cursor + trail + click pulses
-      const minRow = Math.max(-1, Math.floor((mouse.y - effectiveGlowRadius * pulseMod) / vertSpacing));
-      const maxRow = Math.min(Math.ceil(height / vertSpacing) + 1, Math.ceil((mouse.y + effectiveGlowRadius * pulseMod) / vertSpacing));
+      // 3. Render soft expanding wavefront glow rings and click origin halos for all active pulses
+      for (let pIdx = 0; pIdx < pulseQueue.length; pIdx++) {
+        const p = pulseQueue[pIdx];
+        const age = (now - p.birth) * 0.001;
+        const currentR = age * pulseVelocity;
+        const waveProgress = currentR / p.maxRadius;
+        const fadeOut = Math.max(0, 1 - Math.pow(waveProgress, 1.25));
+
+        // Click origin flash/halo (fades out in 0.6s)
+        const centerFade = Math.max(0, 1 - age * 1.6);
+        if (centerFade > 0.01) {
+          const originGrad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, baseR * 2.8);
+          originGrad.addColorStop(
+            0,
+            isDark ? `rgba(255, 255, 255, ${centerFade * 0.45})` : `rgba(15, 23, 42, ${centerFade * 0.3})`
+          );
+          originGrad.addColorStop(1, "transparent");
+          ctx.fillStyle = originGrad;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, baseR * 2.8, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        // Circular expanding shockwave halo
+        if (fadeOut > 0.01 && currentR > 5) {
+          ctx.save();
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, currentR, 0, Math.PI * 2);
+          ctx.lineWidth = Math.max(1.8, baseR * 0.45);
+          ctx.strokeStyle = isDark
+            ? `rgba(255, 255, 255, ${fadeOut * 0.18})`
+            : `rgba(15, 23, 42, ${fadeOut * 0.14})`;
+          ctx.stroke();
+          ctx.restore();
+        }
+      }
+
+      // 4. UNBOUNDED GRID ITERATION: Check all cells on the screen
+      // This guarantees that expanding shockwaves spread seamlessly across the entire lattice without clipping!
+      const cols = Math.ceil(width / horizSpacing) + 2;
+      const rows = Math.ceil(height / vertSpacing) + 2;
 
       const litRadiusSq = litRadius * litRadius * pulseMod * pulseMod;
       const trailRadiusSq = trailRadius * trailRadius;
@@ -388,28 +445,27 @@ export function HexagonalVault({
       const brightCells: [number, number, number][] = [];
       const dimCells: [number, number, number][] = [];
       const coreNodes: [number, number, number][] = [];
+      const sparkVertices: [number, number, number][] = []; // [vx, vy, alpha]
 
-      for (let row = minRow; row <= maxRow; row++) {
+      for (let row = -1; row < rows; row++) {
         const cy = row * vertSpacing;
         const xOffset = (row % 2) * (horizSpacing / 2);
 
-        const minCol = Math.max(-1, Math.floor((mouse.x - effectiveGlowRadius * pulseMod - xOffset) / horizSpacing));
-        const maxCol = Math.min(Math.ceil(width / horizSpacing) + 1, Math.ceil((mouse.x + effectiveGlowRadius * pulseMod - xOffset) / horizSpacing));
-
-        for (let col = minCol; col <= maxCol; col++) {
+        for (let col = -1; col < cols; col++) {
           const cx = col * horizSpacing + xOffset;
 
+          let intensity = 0;
+
+          // A. Cursor light influence
           const dx = cx - mouse.x;
           const dy = cy - mouse.y;
           const distSq = dx * dx + dy * dy;
-
-          let intensity = 0;
           if (distSq < litRadiusSq) {
             const norm = Math.sqrt(distSq) / (litRadius * pulseMod);
             intensity = Math.pow(Math.max(0, 1 - norm), 1.6);
           }
 
-          // Trail influence (fast check)
+          // B. Trail points influence
           for (let i = trail.length - 1; i >= 0; i--) {
             const tp = trail[i];
             const tdx = cx - tp.x;
@@ -424,24 +480,43 @@ export function HexagonalVault({
             }
           }
 
-          // Click Pulses shockwave ripple influence
+          // C. Click Pulses shockwave ripple influence (sparks racing along edges and vertices)
           for (let pIdx = 0; pIdx < pulseQueue.length; pIdx++) {
             const p = pulseQueue[pIdx];
-            const pAge = (now - p.birth) * 0.001;
-            const currentR = pAge * 400 * pulseSpeedMultiplier;
+            const age = (now - p.birth) * 0.001;
+            const currentR = age * pulseVelocity;
             const pdx = cx - p.x;
             const pdy = cy - p.y;
             const pDist = Math.hypot(pdx, pdy);
-            const distFromShockwave = Math.abs(pDist - currentR);
-            if (distFromShockwave < 45) {
-              const pulseIntensity = (1 - distFromShockwave / 45) * Math.max(0, 1 - currentR / p.maxRadius);
+            const distFromWave = Math.abs(pDist - currentR);
+
+            if (distFromWave < p.waveThickness) {
+              const waveProgress = currentR / p.maxRadius;
+              const fadeOut = Math.max(0, 1 - Math.pow(waveProgress, 1.25));
+              const waveProfile = Math.cos((distFromWave / p.waveThickness) * (Math.PI / 2));
+              const pulseIntensity = waveProfile * fadeOut * 2.3;
+
               if (pulseIntensity > intensity) {
-                intensity = Math.max(intensity, pulseIntensity * 1.2);
+                intensity = Math.min(1.0, Math.max(intensity, pulseIntensity));
+              }
+
+              // Collect vertex sparks along the expanding shockwave ring
+              if (distFromWave < p.waveThickness * 0.65 && fadeOut > 0.05) {
+                for (let k = 0; k < 6; k++) {
+                  const vx = cx + hexOffsets[k][0];
+                  const vy = cy + hexOffsets[k][1];
+                  const vDist = Math.hypot(vx - p.x, vy - p.y);
+                  const vDelta = Math.abs(vDist - currentR);
+                  if (vDelta < p.waveThickness * 0.45) {
+                    const sparkAlpha = (1 - vDelta / (p.waveThickness * 0.45)) * fadeOut;
+                    sparkVertices.push([vx, vy, sparkAlpha]);
+                  }
+                }
               }
             }
           }
 
-          // Ambient flow wave + shimmer modulation
+          // D. Ambient flow wave + shimmer modulation
           if (flow > 0 || shimmer > 0) {
             const wavePhase = (cx * 0.008 + cy * 0.006 - elapsed * 1.8 + seed) * flow;
             const shimmerMod = Math.sin(cx * 0.04 - cy * 0.03 + elapsed * 3.0 + seed * 2) * (shimmer * 0.12);
@@ -449,8 +524,9 @@ export function HexagonalVault({
             intensity = Math.min(1, Math.max(0, intensity + ambientWave));
           }
 
-          if (intensity > 0.15) {
-            if (intensity > 0.52) {
+          // Filter into render groups
+          if (intensity > 0.14) {
+            if (intensity > 0.48) {
               brightCells.push([cx, cy, intensity]);
               if (core > 0) {
                 coreNodes.push([cx, cy, intensity]);
@@ -462,7 +538,7 @@ export function HexagonalVault({
         }
       }
 
-      // Render dim highlight cells
+      // 5. Render dim highlight cells
       if (dimCells.length > 0) {
         ctx.beginPath();
         for (let i = 0; i < dimCells.length; i++) {
@@ -474,19 +550,50 @@ export function HexagonalVault({
         ctx.stroke();
       }
 
-      // Render bright highlight cells (closest to cursor)
+      // 6. Render bright highlight cells (cursor focal point & shockwave ring perimeter)
       if (brightCells.length > 0) {
         ctx.beginPath();
         for (let i = 0; i < brightCells.length; i++) {
           traceHex(ctx, brightCells[i][0], brightCells[i][1]);
         }
-        ctx.lineWidth = Math.max(1.2, lineWidth * 2.2);
+        ctx.lineWidth = Math.max(1.5, litWidth);
         ctx.strokeStyle = colorBright;
         ctx.globalAlpha = 0.95;
         ctx.stroke();
       }
 
-      // Render glowing central cores when core > 0
+      // 7. Render sparks racing along the vertices & edges of the expanding shockwave
+      if (sparkVertices.length > 0) {
+        ctx.save();
+        ctx.strokeStyle = colorBright;
+        ctx.fillStyle = colorBright;
+
+        // Draw small junction stars/sparks pointing along the 3 lattice angles
+        ctx.beginPath();
+        for (let i = 0; i < sparkVertices.length; i++) {
+          const [vx, vy, alpha] = sparkVertices[i];
+          if (alpha <= 0.05) continue;
+
+          // Tiny center spark dot
+          ctx.moveTo(vx + 1.6, vy);
+          ctx.arc(vx, vy, 1.6, 0, Math.PI * 2);
+
+          // 3-way radiating spark rays along honeycomb edges
+          const rayLength = 3.6;
+          for (let k = 0; k < 3; k++) {
+            const angle = (Math.PI / 180) * (120 * k - 30);
+            ctx.moveTo(vx, vy);
+            ctx.lineTo(vx + Math.cos(angle) * rayLength, vy + Math.sin(angle) * rayLength);
+          }
+        }
+        ctx.lineWidth = Math.max(1.2, lineWidth * 2);
+        ctx.globalAlpha = 0.95;
+        ctx.stroke();
+        ctx.fill();
+        ctx.restore();
+      }
+
+      // 8. Render glowing central cores when core > 0
       if (coreNodes.length > 0 && core > 0) {
         const coreNodeRadius = Math.max(1.2, baseR * core * 3.5);
         ctx.beginPath();
@@ -501,7 +608,7 @@ export function HexagonalVault({
         ctx.fill();
       }
 
-      // 4. Vignette overlay if vignette > 0
+      // 9. Vignette overlay if vignette > 0
       if (vignette > 0) {
         const vGrad = ctx.createRadialGradient(
           width / 2,

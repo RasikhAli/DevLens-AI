@@ -61,7 +61,7 @@ export default function LandingPage() {
 
       {/* Hero Section with Interactive Hexagonal Vault (React Bits Pro) */}
       <section className="relative py-20 md:py-32 px-6 overflow-hidden border-b border-border/40 dark:border-white/5">
-        <div className="absolute inset-0 pointer-events-none opacity-85 dark:opacity-90">
+        <div className="absolute inset-0 opacity-85 dark:opacity-90">
           <M
             cellSize={0.75}
             lineWidth={0.3}
@@ -84,7 +84,7 @@ export default function LandingPage() {
             interactive={true}
             clickPulses={true}
             paused={false}
-            className="w-full h-full pointer-events-auto"
+            className="w-full h-full cursor-pointer"
           />
         </div>
 
