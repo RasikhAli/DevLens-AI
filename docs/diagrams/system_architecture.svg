@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 620" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d14"/>
+      <stop offset="50%" stop-color="#0e1320"/>
+      <stop offset="100%" stop-color="#070a10"/>
+    </linearGradient>
+
+    <!-- Card Gradients -->
+    <linearGradient id="cardGradDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#181f32"/>
+      <stop offset="100%" stop-color="#0f1524"/>
+    </linearGradient>
+
+    <linearGradient id="violetGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+
+    <linearGradient id="emeraldGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+
+    <linearGradient id="amberGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+
+    <!-- Markers -->
+    <marker id="arrowViolet" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#a78bfa" />
+    </marker>
+    <marker id="arrowCyan" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrowEmerald" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#34d399" />
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1160" height="620" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Subtle Grid Pattern -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="60" y1="0" x2="60" y2="620"/>
+    <line x1="200" y1="0" x2="200" y2="620"/>
+    <line x1="340" y1="0" x2="340" y2="620"/>
+    <line x1="480" y1="0" x2="480" y2="620"/>
+    <line x1="620" y1="0" x2="620" y2="620"/>
+    <line x1="760" y1="0" x2="760" y2="620"/>
+    <line x1="900" y1="0" x2="900" y2="620"/>
+    <line x1="1040" y1="0" x2="1040" y2="620"/>
+    <line x1="0" y1="80" x2="1160" y2="80"/>
+    <line x1="0" y1="200" x2="1160" y2="200"/>
+    <line x1="0" y1="320" x2="1160" y2="320"/>
+    <line x1="0" y1="440" x2="1160" y2="440"/>
+    <line x1="0" y1="560" x2="1160" y2="560"/>
+  </g>
+
+  <!-- Title Header -->
+  <g transform="translate(60, 48)">
+    <text font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="22" fill="#ffffff" letter-spacing="-0.5">
+      DevLens AI <tspan fill="#a78bfa" font-size="14" font-weight="700" font-family="monospace">SYSTEM ARCHITECTURE</tspan>
+    </text>
+    <text y="22" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="12" fill="#94a3b8">
+      End-to-End Ingestion, Verifiable Provenance Trail &amp; Deterministic Decision Engine
+    </text>
+  </g>
+
+  <!-- CONNECTION PATHS -->
+  <!-- 1. Sources to Gateway -->
+  <path d="M 180 185 L 180 230" stroke="#8b5cf6" stroke-width="2" fill="none" marker-end="url(#arrowViolet)"/>
+
+  <!-- 2. Gateway to Normalizer -->
+  <path d="M 180 300 L 180 345" stroke="#8b5cf6" stroke-width="2" fill="none" marker-end="url(#arrowViolet)"/>
+
+  <!-- 3. Normalizer to Evidence Extraction -->
+  <path d="M 280 380 L 350 380" stroke="#8b5cf6" stroke-width="2" fill="none" marker-end="url(#arrowViolet)"/>
+
+  <!-- 4. Evidence Extraction to Database -->
+  <path d="M 530 380 L 600 380" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowCyan)"/>
+
+  <!-- 5. Database to Workflows -->
+  <!-- to W1 Matrix (top) -->
+  <path d="M 780 360 C 820 360, 820 220, 860 220" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowCyan)"/>
+  <!-- to W2 Job Matcher (middle) -->
+  <path d="M 780 380 L 860 380" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowCyan)"/>
+  <!-- to W3 Growth Gap (bottom) -->
+  <path d="M 780 400 C 820 400, 820 520, 860 520" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arrowCyan)"/>
+
+  <!-- 6. Job Matcher to Deterministic Engine -->
+  <path d="M 970 420 L 970 460" stroke="#34d399" stroke-width="2" fill="none" marker-end="url(#arrowEmerald)"/>
+
+  <!-- 7. Deterministic Engine to Export -->
+  <path d="M 1070 495 C 1090 495, 1100 495, 1100 495" stroke="#34d399" stroke-width="2" fill="none"/>
+
+
+  <!-- NODE 1: Sources -->
+  <g transform="translate(60, 115)">
+    <rect width="240" height="70" rx="10" fill="url(#cardGradDark)" stroke="#8b5cf6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="4" height="70" rx="2" fill="#8b5cf6"/>
+    <text x="20" y="28" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" fill="#f8fafc">
+      Candidate Data Sources
+    </text>
+    <text x="20" y="48" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="11" fill="#cbd5e1">
+      CVs (PDF/DOCX), GitHub, Portfolios
+    </text>
+  </g>
+
+  <!-- NODE 2: SSRF Gateway -->
+  <g transform="translate(60, 230)">
+    <rect width="240" height="70" rx="10" fill="url(#cardGradDark)" stroke="#8b5cf6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="4" height="70" rx="2" fill="#8b5cf6"/>
+    <text x="20" y="28" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" fill="#f8fafc">
+      SSRF-Hardened Ingestion Gateway
+    </text>
+    <text x="20" y="48" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="11" fill="#94a3b8">
+      Domain Whitelisting &amp; IP Protection
+    </text>
+  </g>
+
+  <!-- NODE 3: Normalizer -->
+  <g transform="translate(60, 345)">
+    <rect width="220" height="70" rx="10" fill="url(#cardGradDark)" stroke="#8b5cf6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="4" height="70" rx="2" fill="#8b5cf6"/>
+    <text x="20" y="28" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" fill="#f8fafc">
+      Skill Normalizer
+    </text>
+    <text x="20" y="48" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="11" fill="#94a3b8">
+      Taxonomy Mapping &amp; Aliases
+    </text>
+  </g>
+
+  <!-- NODE 4: Evidence Extraction -->
+  <g transform="translate(350, 345)">
+    <rect width="180" height="70" rx="10" fill="url(#cardGradDark)" stroke="#06b6d4" stroke-width="1.5"/>
+    <rect x="0" y="0" width="4" height="70" rx="2" fill="#06b6d4"/>
+    <text x="16" y="26" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="12.5" fill="#f8fafc">
+      Evidence Extraction
+    </text>
+    <text x="16" y="46" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="10.5" fill="#94a3b8">
+      Test Suites, CI/CD, Commits
+    </text>
+  </g>
+
+  <!-- NODE 5: State Store / Dossier Database -->
+  <g transform="translate(600, 340)">
+    <rect width="180" height="80" rx="10" fill="url(#cardGradDark)" stroke="#3b82f6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="4" height="80" rx="2" fill="#3b82f6"/>
+    <text x="18" y="28" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" fill="#60a5fa">
+      Dossier Database
+    </text>
+    <text x="18" y="48" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="11" fill="#cbd5e1">
+      Prisma ORM &amp; State Store
+    </text>
+    <text x="18" y="66" font-family="monospace" font-size="9.5" fill="#94a3b8">
+      Immutable Evidence Trail
+    </text>
+  </g>
+
+  <!-- WORKFLOW 1: Dev vs Dev Matrix -->
+  <g transform="translate(860, 185)">
+    <rect width="240" height="70" rx="10" fill="url(#cardGradDark)" stroke="#a855f7" stroke-width="1.5"/>
+    <rect x="0" y="0" width="4" height="70" rx="2" fill="#a855f7"/>
+    <text x="18" y="28" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" fill="#f8fafc">
+      Workflow 1: Dev Matrix
+    </text>
+    <text x="18" y="48" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="11" fill="#94a3b8">
+      Side-by-Side Skills &amp; Test Proof
+    </text>
+  </g>
+
+  <!-- WORKFLOW 2: Candidate vs Job Matcher -->
+  <g transform="translate(860, 345)">
+    <rect width="240" height="75" rx="10" fill="url(#cardGradDark)" stroke="#10b981" stroke-width="2"/>
+    <rect x="0" y="0" width="4" height="75" rx="2" fill="#10b981"/>
+    <text x="18" y="28" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" fill="#34d399">
+      Workflow 2: Job Matcher
+    </text>
+    <text x="18" y="48" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="11" fill="#cbd5e1">
+      Deterministic Scoring Engine
+    </text>
+    <text x="18" y="66" font-family="monospace" font-size="9.5" fill="#a7f3d0">
+      Skills 40% | Exp 20% | CI 15%
+    </text>
+  </g>
+
+  <!-- WORKFLOW 3: Growth Gap Analyzer -->
+  <g transform="translate(860, 485)">
+    <rect width="240" height="70" rx="10" fill="url(#cardGradDark)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="4" height="70" rx="2" fill="#f59e0b"/>
+    <text x="18" y="28" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" fill="#f8fafc">
+      Workflow 3: Gap Analyzer
+    </text>
+    <text x="18" y="48" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="11" fill="#94a3b8">
+      Missing Skills &amp; Growth Path
+    </text>
+  </g>
+
+  <!-- Legend & Badges at Bottom -->
+  <g transform="translate(60, 560)">
+    <circle cx="6" cy="6" r="5" fill="#8b5cf6"/>
+    <text x="20" y="10" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Ingestion Pipeline</text>
+
+    <circle cx="160" cy="6" r="5" fill="#06b6d4"/>
+    <text x="174" y="10" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Evidence Extraction</text>
+
+    <circle cx="330" cy="6" r="5" fill="#3b82f6"/>
+    <text x="344" y="10" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Verified State Store</text>
+
+    <circle cx="500" cy="6" r="5" fill="#10b981"/>
+    <text x="514" y="10" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Deterministic Scoring</text>
+  </g>
+</svg>

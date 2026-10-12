@@ -40,7 +40,7 @@ const PRESET_MONO: [string, string] = ["#8A8A99", "#FFFFFF"];
 export function HexagonalVault({
   colors,
   cellSize = 0.75,
-  lineWidth = 0.3,
+  lineWidth = 0.4,
   litWidth = 2.4,
   lattice = 0.1,
   glow = 2.85,
@@ -51,12 +51,12 @@ export function HexagonalVault({
   trailLength = 1.7,
   trailWidth = 0.8,
   follow = 0.9,
-  flow = 0.98,
-  shimmer = 1.2,
+  flow = 0,
+  shimmer = 0,
   speed = 1.45,
   pulseSpeed = 0.55,
   seed = 0,
-  autoplay = true,
+  autoplay = false,
   interactive = true,
   clickPulses = true,
   paused = false,
@@ -167,10 +167,10 @@ export function HexagonalVault({
         }
       }
 
-      offscreenCtx.lineWidth = Math.max(0.4, lineWidth);
+      offscreenCtx.lineWidth = Math.max(0.5, lineWidth);
       offscreenCtx.strokeStyle = isDark
-        ? "rgba(138, 138, 153, 0.12)"
-        : "rgba(100, 116, 139, 0.16)";
+        ? "rgba(138, 138, 153, 0.22)"
+        : "rgba(100, 116, 139, 0.26)";
       offscreenCtx.stroke();
     };
 
@@ -277,17 +277,25 @@ export function HexagonalVault({
 
         const cx = clientX - rect.left;
         const cy = clientY - rect.top;
+
+        // Focus mouse coordinates immediately to ignite the clicked spot
+        mouse.x = cx;
+        mouse.y = cy;
+        mouse.targetX = cx;
+        mouse.targetY = cy;
+        mouse.isHovered = true;
+
         const maxDist = Math.hypot(
           Math.max(cx, width - cx),
           Math.max(cy, height - cy)
-        ) * 1.35;
+        ) * 1.5;
 
         pulseQueue.push({
           x: cx,
           y: cy,
           birth: now,
-          maxRadius: Math.max(500, maxDist),
-          waveThickness: baseR * 2.5,
+          maxRadius: Math.max(650, maxDist),
+          waveThickness: baseR * 3.2,
         });
       }
     };
@@ -336,6 +344,9 @@ export function HexagonalVault({
         const idleY = height / 2 + Math.sin(elapsed * 0.7 + seed) * (height * 0.2);
         mouse.x += (idleX - mouse.x) * (followRate * 0.45);
         mouse.y += (idleY - mouse.y) * (followRate * 0.45);
+      } else {
+        mouse.x = -1000;
+        mouse.y = -1000;
       }
 
       // Purge expired trail points
@@ -344,7 +355,7 @@ export function HexagonalVault({
       }
 
       // Calculate pulse expansion velocity based on pulseSpeed and speed props
-      const pulseVelocity = 480 * Math.max(0.35, pulseSpeed) * Math.max(0.7, speed * 0.75);
+      const pulseVelocity = 640 * Math.max(0.6, pulseSpeed) * Math.max(0.8, speed * 0.75);
 
       // Update and purge completed click pulses
       for (let pIdx = pulseQueue.length - 1; pIdx >= 0; pIdx--) {
@@ -407,15 +418,15 @@ export function HexagonalVault({
         // Click origin flash/halo (fades out in 0.6s)
         const centerFade = Math.max(0, 1 - age * 1.6);
         if (centerFade > 0.01) {
-          const originGrad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, baseR * 2.8);
+          const originGrad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, baseR * 3.2);
           originGrad.addColorStop(
             0,
-            isDark ? `rgba(255, 255, 255, ${centerFade * 0.45})` : `rgba(15, 23, 42, ${centerFade * 0.3})`
+            isDark ? `rgba(255, 255, 255, ${centerFade * 0.75})` : `rgba(124, 58, 237, ${centerFade * 0.6})`
           );
           originGrad.addColorStop(1, "transparent");
           ctx.fillStyle = originGrad;
           ctx.beginPath();
-          ctx.arc(p.x, p.y, baseR * 2.8, 0, Math.PI * 2);
+          ctx.arc(p.x, p.y, baseR * 3.2, 0, Math.PI * 2);
           ctx.fill();
         }
 
@@ -424,10 +435,10 @@ export function HexagonalVault({
           ctx.save();
           ctx.beginPath();
           ctx.arc(p.x, p.y, currentR, 0, Math.PI * 2);
-          ctx.lineWidth = Math.max(1.8, baseR * 0.45);
+          ctx.lineWidth = Math.max(2.5, baseR * 0.55);
           ctx.strokeStyle = isDark
-            ? `rgba(255, 255, 255, ${fadeOut * 0.18})`
-            : `rgba(15, 23, 42, ${fadeOut * 0.14})`;
+            ? `rgba(167, 139, 250, ${fadeOut * 0.85})`
+            : `rgba(124, 58, 237, ${fadeOut * 0.75})`;
           ctx.stroke();
           ctx.restore();
         }
@@ -494,7 +505,7 @@ export function HexagonalVault({
               const waveProgress = currentR / p.maxRadius;
               const fadeOut = Math.max(0, 1 - Math.pow(waveProgress, 1.25));
               const waveProfile = Math.cos((distFromWave / p.waveThickness) * (Math.PI / 2));
-              const pulseIntensity = waveProfile * fadeOut * 2.3;
+              const pulseIntensity = waveProfile * fadeOut * 3.8;
 
               if (pulseIntensity > intensity) {
                 intensity = Math.min(1.0, Math.max(intensity, pulseIntensity));

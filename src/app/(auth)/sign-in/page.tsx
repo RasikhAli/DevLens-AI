@@ -7,6 +7,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Code2, ArrowRight, AlertCircle, RefreshCw, ShieldCheck, Users, Lock, Sparkles } from "lucide-react";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
 
 export default function SignInPage() {
   const router = useRouter();
@@ -40,7 +41,10 @@ export default function SignInPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background flex flex-col justify-center items-center p-6 bg-dot-pattern">
+    <div className="min-h-screen bg-background flex flex-col justify-center items-center p-6 bg-dot-pattern relative">
+      <div className="absolute top-6 right-6 z-20">
+        <ThemeToggle />
+      </div>
       <div className="w-full max-w-md space-y-6">
         <div className="text-center space-y-2">
           <div className="w-12 h-12 rounded-xl bg-violet-600/10 border border-violet-500/30 flex items-center justify-center text-violet-500 mx-auto shadow-sm">

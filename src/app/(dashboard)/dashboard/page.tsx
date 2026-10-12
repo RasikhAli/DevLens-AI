@@ -22,31 +22,17 @@ export default async function DashboardPage() {
       <AppHeader title="Executive Overview" />
 
       <div className="p-6 md:p-8 space-y-8 max-w-7xl mx-auto w-full">
-        {/* Top Header Banner with Hexagonal Vault Interactive Canvas */}
+        {/* Top Header Banner with Static Hexagonal Grid */}
         <div className="relative overflow-hidden rounded-2xl border border-border/80 dark:border-white/10 bg-card/85 dark:bg-zinc-950/80 p-6 md:p-8 backdrop-blur-xl shadow-sm">
-          <div className="absolute inset-0 pointer-events-none opacity-45 dark:opacity-50">
+          <div className="absolute inset-0 pointer-events-none opacity-40 dark:opacity-45">
             <M
               cellSize={0.75}
-              lineWidth={0.3}
-              litWidth={2.4}
-              lattice={0.1}
-              glow={2.85}
-              glowRadius={0.5}
-              core={0.03}
-              vignette={0}
-              grain={0}
-              trailLength={1.7}
-              trailWidth={0.8}
-              follow={0.9}
-              flow={0.98}
-              shimmer={1.2}
-              speed={1.45}
-              pulseSpeed={0.55}
-              seed={0}
-              autoplay={true}
+              lineWidth={0.4}
+              flow={0}
+              shimmer={0}
+              autoplay={false}
+              clickPulses={false}
               interactive={true}
-              clickPulses={true}
-              paused={false}
               className="w-full h-full pointer-events-auto"
             />
           </div>

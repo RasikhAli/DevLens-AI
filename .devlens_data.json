@@ -23,6 +23,38 @@
       "passwordHash": "$2b$10$wKz0bBvXh1LqvI6vOiq9sONJ3gR/P4G.YQk0fF9aJ7p2d9G9h1r5a",
       "createdAt": "2026-10-09T23:01:08.712Z",
       "role": "RECRUITER"
+    },
+    {
+      "id": "usr_1791763883181",
+      "email": "alex.morgan.1791763880444@devlens.ai",
+      "name": "Alex Morgan",
+      "passwordHash": "$2b$10$jMsqaKF1aZCuYBpo4I118OUnb4Zn3G4y2l7MQ/69xxV8b2VD1KtSm",
+      "role": "RECRUITER",
+      "createdAt": "2026-10-12T00:11:23.181Z"
+    },
+    {
+      "id": "usr_1791764428066",
+      "email": "alex.morgan.1791764426586@devlens.ai",
+      "name": "Alex Morgan",
+      "passwordHash": "$2b$10$bRjrT6KFR6tzjTPJ8J4if.P133/VSaWdKwu9rdPOj6R62O3jKpnpy",
+      "role": "RECRUITER",
+      "createdAt": "2026-10-12T00:20:28.066Z"
+    },
+    {
+      "id": "usr_1791764938802",
+      "email": "alex.morgan.1791764937275@devlens.ai",
+      "name": "Alex Morgan",
+      "passwordHash": "$2b$10$/gtMmGJLT658/rl55xMx1urzQJS8DOvbj9r9uFjPr6WKzxrgOw6SC",
+      "role": "RECRUITER",
+      "createdAt": "2026-10-12T00:28:58.802Z"
+    },
+    {
+      "id": "usr_1791766747713",
+      "email": "alex.morgan.1791766745835@devlens.ai",
+      "name": "Alex Morgan",
+      "passwordHash": "$2b$10$MweBpx4AKe9OfPoQxFmg7uj8vF7.o20tRYhFI/Zlcgw1LgwXullRG",
+      "role": "RECRUITER",
+      "createdAt": "2026-10-12T00:59:07.713Z"
     }
   ],
   "profiles": [
@@ -1488,6 +1520,38 @@
     }
   ],
   "comparisons": [
+    {
+      "id": "cmp_1791766789609",
+      "ownerId": "usr_1791766747713",
+      "title": "Comparison: Rasikh Ali vs Elena Rostova",
+      "comparisonType": "DEVELOPER_VS_DEVELOPER",
+      "createdAt": "2026-10-12T00:59:49.609Z",
+      "results": []
+    },
+    {
+      "id": "cmp_1791764983153",
+      "ownerId": "usr_1791764938802",
+      "title": "Comparison: Rasikh Ali vs Elena Rostova",
+      "comparisonType": "DEVELOPER_VS_DEVELOPER",
+      "createdAt": "2026-10-12T00:29:43.153Z",
+      "results": []
+    },
+    {
+      "id": "cmp_1791764465870",
+      "ownerId": "usr_1791764428066",
+      "title": "Comparison: Rasikh Ali vs Elena Rostova",
+      "comparisonType": "DEVELOPER_VS_DEVELOPER",
+      "createdAt": "2026-10-12T00:21:05.870Z",
+      "results": []
+    },
+    {
+      "id": "cmp_1791763928250",
+      "ownerId": "usr_1791763883181",
+      "title": "Comparison: Rasikh Ali vs Elena Rostova",
+      "comparisonType": "DEVELOPER_VS_DEVELOPER",
+      "createdAt": "2026-10-12T00:12:08.250Z",
+      "results": []
+    },
     {
       "id": "cmp_1791604630997",
       "ownerId": "admin-user-1",

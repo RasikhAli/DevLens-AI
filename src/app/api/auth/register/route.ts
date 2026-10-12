@@ -8,6 +8,7 @@ const RegisterSchema = z.object({
   email: z.string().email("Invalid email address"),
   password: z.string().min(8, "Password must be at least 8 characters"),
   name: z.string().min(2, "Name must be at least 2 characters"),
+  role: z.enum(["RECRUITER", "ADMIN", "VIEWER"]).optional(),
 });
 
 export async function POST(request: Request) {
@@ -22,7 +23,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const { email, password, name } = parsed.data;
+    const { email, password, name, role } = parsed.data;
     const existing = dbStore.findUserByEmail(email);
 
     if (existing) {
@@ -38,7 +39,7 @@ export async function POST(request: Request) {
       email,
       name,
       passwordHash,
-      role: "RECRUITER",
+      role: role || "RECRUITER",
       createdAt: new Date().toISOString(),
     });
 
